@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순천서남교회 생태환경위원회 모집</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Pretendard -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#10b981 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative overflow-x-hidden flex items-center justify-center p-4 sm:p-8">
+
+    <!-- Decorative background elements -->
+    <div class="fixed inset-0 bg-pattern z-0 pointer-events-none"></div>
+    <div class="fixed -top-40 -right-40 w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 z-0"></div>
+    <div class="fixed -bottom-40 -left-40 w-96 h-96 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 z-0"></div>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-3xl glass-panel rounded-3xl p-8 sm:p-12 md:p-16 relative z-10 fade-in-up">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12 fade-in-up delay-100">
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-semibold tracking-wider mb-4">
+                순천서남교회
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 leading-tight mb-4 tracking-tight">
+                하나님의 창조 세계를<br/>돌볼 동역자를 찾습니다.
+            </h1>
+            <h2 class="text-xl sm:text-2xl font-bold text-emerald-600">
+                생태환경위원회<span class="text-base font-normal text-slate-500 ml-2">(가칭)</span> 모집
+            </h2>
+        </header>
+
+        <!-- Description Section -->
+        <div class="text-center text-slate-600 text-lg leading-relaxed mb-12 fade-in-up delay-200 max-w-2xl mx-auto space-y-4">
+            <p>
+                우리가 살아가는 지구별, 하나님께서 보시기에 심히 좋았더라 하신 그 아름다운 피조 세계를 지키고 가꾸는 일에 함께할 성도님들을 기다립니다.
+            </p>
+            <p>
+                작은 실천부터 교회 내 생태 친화적인 변화를 이끌어갈 뜻깊은 여정에 동참해 주세요.
+            </p>
+        </div>
+
+        <!-- Action Section (QR Code & Info) -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10 fade-in-up delay-300 bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            
+            <!-- QR Code -->
+            <div class="flex flex-col items-center group">
+                <div class="w-48 h-48 bg-slate-50 rounded-2xl p-4 shadow-inner border border-slate-200 overflow-hidden relative transition-transform duration-300 hover:scale-105">
+                     <img src="생태환경위원회 모집 QR.jpg" alt="신청 QR코드" class="w-full h-full object-contain rounded-xl" onerror="this.onerror=null; this.src='https://placehold.co/400x400/10b981/ffffff?text=QR+Code';">
+                     <!-- Hover Overlay -->
+                     <div class="absolute inset-0 bg-emerald-500 bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                     </div>
+                </div>
+                <p class="mt-4 font-semibold text-emerald-600 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    스캔하여 신청하기
+                </p>
+            </div>
+
+            <!-- Divider (Desktop) -->
+            <div class="hidden md:block w-px h-32 bg-slate-200"></div>
+            <!-- Divider (Mobile) -->
+            <div class="block md:hidden w-32 h-px bg-slate-200"></div>
+
+            <!-- Contact Text -->
+            <div class="text-center md:text-left space-y-4">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">참여 방법</h3>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">1</span>
+                        <span>좌측의 <strong>QR코드</strong>를 카메라로 스캔하여 온라인 양식을 작성해 주세요.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">2</span>
+                        <span>또는 담당 <strong>목회자에게 직접 말씀</strong>해 주셔도 됩니다.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-sm text-slate-400 font-medium">
+            &copy; 순천서남교회 생태환경위원회
+        </footer>
+
+    </main>
+
+</body>
+</html>
