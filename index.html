@@ -1,128 +1,1907 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>순천서남교회 생태환경위원회 모집</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Pretendard -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <style>
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+  <title>순천만 갈대밭 영성훈련 · 순천생태학교</title>
+  <meta name="description" content="순천만 갈대밭 영성훈련: 생태 치유의 길을 걷다. 최광선 목사(순천에코포럼) 저 원작 도서 전문 수록 · 순천생태학교 현장 모바일 가이드">
+  <meta name="theme-color" content="#2e5a44">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
 
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
+  <style>
+    :root {
+      --primary: #2e5a44;
+      --primary-dark: #1b3a2b;
+      --primary-light: #e8f0eb;
+      --accent-gold: #c59b27;
+      --accent-warm: #8d6e63;
+      --bg-warm: #fcfbfa;
+      --surface: #ffffff;
+      --surface-variant: #f4f1ea;
+      --text-main: #212529;
+      --text-muted: #555c63;
+      --text-caption: #717880;
+      --border-color: #e5e0d8;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 6px 18px rgba(0,0,0,0.08);
+      --font-scale: 1rem;
+    }
 
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+      background-color: var(--bg-warm);
+      color: var(--text-main);
+      font-size: var(--font-scale);
+      line-height: 1.8;
+      word-break: keep-all;
+      letter-spacing: -0.01em;
+      padding-bottom: 95px;
+    }
 
-        .bg-pattern {
-            background-image: radial-gradient(#10b981 1px, transparent 1px);
-            background-size: 30px 30px;
-            opacity: 0.05;
-        }
-    </style>
+    /* Senior Zoom Mode adjustments */
+    body.font-lg {
+      --font-scale: 1.18rem;
+    }
+    body.font-xl {
+      --font-scale: 1.34rem;
+    }
+
+    /* Top Fixed Header */
+    header.app-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-sub {
+      font-size: 0.78rem;
+      color: var(--text-caption);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-font-zoom {
+      font-weight: 700;
+      padding: 6px 12px;
+      border: 1.5px solid var(--primary);
+      border-radius: var(--radius-sm);
+      color: var(--primary);
+      background: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+    .btn-font-zoom:active {
+      background: var(--primary-light);
+      transform: scale(0.95);
+    }
+
+    /* Main Container */
+    main.app-main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .view {
+      display: none;
+    }
+    .view.active {
+      display: block;
+      animation: fadeIn 0.22s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #2e5a44 0%, #1a382a 100%);
+      color: #ffffff;
+      padding: 22px 20px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner::after {
+      content: '🌾';
+      position: absolute;
+      right: 12px;
+      bottom: 6px;
+      font-size: 5rem;
+      opacity: 0.16;
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.22);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .hero-desc {
+      font-size: 0.94rem;
+      opacity: 0.95;
+      line-height: 1.65;
+    }
+
+    /* View Switcher Chips */
+    .view-chips {
+      display: flex;
+      background: #e8e4dc;
+      padding: 4px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .chip-btn {
+      flex: 1;
+      padding: 11px;
+      border: none;
+      background: transparent;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-radius: 9px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .chip-btn.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Spot Card List */
+    .spot-card {
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform 0.15s, border-color 0.2s;
+    }
+
+    .spot-card:active {
+      transform: scale(0.99);
+      border-color: var(--primary);
+    }
+
+    .spot-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .spot-badge-time {
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .spot-chapter-tag {
+      font-size: 0.82rem;
+      color: var(--text-caption);
+      font-weight: 600;
+    }
+
+    .spot-card-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .spot-card-place {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.95rem;
+      color: var(--accent-warm);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .spot-card-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .spot-progress-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.8rem;
+      padding: 3px 9px;
+      border-radius: 12px;
+      background: #f0f0f0;
+      margin-top: 10px;
+    }
+    .spot-progress-indicator.done {
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 700;
+    }
+
+    /* SPOT DETAIL VIEW */
+    .spot-detail-header {
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface-variant);
+      border: 1px solid var(--border-color);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+      cursor: pointer;
+      margin-bottom: 14px;
+    }
+
+    .detail-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+
+    .detail-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .detail-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .detail-tip-box {
+      background: #fff8e1;
+      border-left: 4px solid var(--accent-gold);
+      padding: 12px 14px;
+      border-radius: 4px;
+      font-size: 0.92rem;
+      color: #5d4037;
+      line-height: 1.6;
+    }
+
+    /* 5-Step Stepper Component */
+    .step-stepper-container {
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 8px 6px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-stepper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .step-node {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 6px 2px;
+      gap: 5px;
+      transition: all 0.2s;
+      outline: none;
+    }
+
+    .step-num-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #e8e4dc;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .step-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .step-node.active .step-num-badge {
+      background: var(--primary);
+      color: #ffffff;
+      transform: scale(1.15);
+      box-shadow: 0 3px 8px rgba(46,90,68,0.35);
+    }
+
+    .step-node.active .step-label {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    /* Step Card */
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 20px;
+    }
+
+    .step-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--surface-variant);
+      padding-bottom: 10px;
+    }
+
+    .step-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .step-tts-btn {
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid #c2d7cb;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .step-tts-btn.speaking {
+      background: #ffebee;
+      color: #c62828;
+      border-color: #ef9a9a;
+    }
+
+    .prose-text {
+      line-height: 1.9;
+      font-size: 1.05rem;
+      color: #2b2f33;
+      white-space: pre-line;
+    }
+
+    
+    /* Ultra-Clear High Contrast Bible & Quote Cards */
+    .bible-card {
+      background: #ffffff;
+      border: 2px solid #2e5a44;
+      border-left: 8px solid #1b3a2b;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 18px 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+    }
+
+    .bible-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1b3a2b;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .bible-text {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      font-size: 1.24rem;
+      font-weight: 800;
+      line-height: 1.85;
+      color: #000000;
+      white-space: pre-line;
+      letter-spacing: -0.02em;
+    }
+
+    .quote-card {
+      background: #fdfbf7;
+      border: 1.5px solid #d7ccc8;
+      border-left: 7px solid #8d6e63;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 18px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .quote-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #8d6e63;
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .quote-text {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      line-height: 1.8;
+      color: #111111;
+      white-space: pre-line;
+    }
+
+
+    /* Contemplatio Breathing & Timer */
+    .meditation-box {
+      background: #f1f8f4;
+      border: 1.5px solid #cce5d6;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .breath-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a5d6a7, #66bb6a);
+      margin: 16px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(102, 187, 106, 0.35);
+      transition: transform 4s ease-in-out;
+    }
+    .breath-circle.inhale { transform: scale(1.35); }
+    .breath-circle.exhale { transform: scale(0.9); }
+
+    .timer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .timer-btn {
+      background: #ffffff;
+      border: 1.5px solid #2e5a44;
+      color: #2e5a44;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    /* Checklist */
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--surface-variant);
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 1.02rem;
+      line-height: 1.65;
+    }
+
+    .check-item input[type="checkbox"] {
+      width: 22px;
+      height: 22px;
+      margin-top: 3px;
+      accent-color: var(--primary);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .check-item.done {
+      text-decoration: line-through;
+      color: var(--text-caption);
+      background: #f0eee9;
+    }
+
+    /* Journaling Questions */
+    .journal-box {
+      margin-top: 20px;
+    }
+
+    .journal-item {
+      background: #fffdf9;
+      border: 1px solid #ebdcc6;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .journal-q {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #4e342e;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .journal-textarea {
+      width: 100%;
+      min-height: 95px;
+      padding: 12px;
+      border: 1.5px solid #d7ccc8;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 1rem;
+      line-height: 1.65;
+      background: #ffffff;
+      resize: vertical;
+    }
+
+    .journal-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(46,90,68,0.15);
+    }
+
+    .saved-status {
+      font-size: 0.8rem;
+      color: #2e7d32;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    /* In-Card Step Action Navigation */
+    .step-action-bar {
+      display: flex;
+      gap: 10px;
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1.5px dashed var(--border-color);
+    }
+
+    .btn-step-prev {
+      flex: 1;
+      padding: 14px 12px;
+      background: var(--surface-variant);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-step-next {
+      flex: 1.6;
+      padding: 14px 16px;
+      background: var(--primary);
+      border: 1px solid var(--primary-dark);
+      border-radius: var(--radius-sm);
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 3px 10px rgba(46,90,68,0.25);
+    }
+
+    .btn-step-next:active, .btn-step-prev:active {
+      transform: scale(0.98);
+    }
+
+    .btn-step-highlight {
+      background: #2e7d32 !important;
+      border-color: #1b5e20 !important;
+      animation: pulseBtn 2s infinite;
+    }
+
+    @keyframes pulseBtn {
+      0% { box-shadow: 0 0 0 0 rgba(46,125,50, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(46,125,50, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(46,125,50, 0); }
+    }
+
+    /* Spot Bottom Nav */
+    .spot-bottom-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .nav-spot-btn {
+      flex: 1;
+      padding: 14px 16px;
+      background: var(--surface);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .nav-spot-btn span.label {
+      font-size: 0.8rem;
+      color: var(--text-caption);
+      font-weight: 500;
+    }
+
+    /* Bottom App Bar */
+    nav.bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-color);
+      box-shadow: 0 -3px 12px rgba(0,0,0,0.06);
+    }
+
+    .bottom-nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      padding: 6px 0 8px 0;
+    }
+
+    .bottom-tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      gap: 3px;
+      min-width: 64px;
+    }
+
+    .bottom-tab .tab-icon {
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .bottom-tab.active {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    /* Full Page Poems & Prayers */
+    .poem-card {
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .poem-title {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .poem-author {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-caption);
+      margin-bottom: 18px;
+    }
+
+    .poem-body {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.08rem;
+      line-height: 2.1;
+      color: #263238;
+      white-space: pre-line;
+      text-align: center;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      margin: 16px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 3px;
+      background: #c8e6c9;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -28px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+
+    .btn-action-large {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(46,90,68,0.25);
+      margin-top: 16px;
+    }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 85px;
+      left: 50%;
+      transform: translateX(-50%) translateY(50px);
+      background: rgba(33, 37, 41, 0.92);
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      z-index: 2000;
+      pointer-events: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+    #toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
 </head>
-<body class="min-h-screen relative overflow-x-hidden flex items-center justify-center p-4 sm:p-8">
+<body>
 
-    <!-- Decorative background elements -->
-    <div class="fixed inset-0 bg-pattern z-0 pointer-events-none"></div>
-    <div class="fixed -top-40 -right-40 w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 z-0"></div>
-    <div class="fixed -bottom-40 -left-40 w-96 h-96 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 z-0"></div>
+  <!-- Top Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <div class="brand" onclick="switchMainView('course-view')">
+        <div class="brand-title">🌾 순천만 갈대밭 영성훈련</div>
+        <div class="brand-sub">순천생태학교 · 모바일 가이드</div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-font-zoom" id="btn-font-scale" onclick="cycleFontSize()" title="글자 크기 변경">
+          가 <span id="font-scale-label">보통</span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Main Content Container -->
-    <main class="w-full max-w-3xl glass-panel rounded-3xl p-8 sm:p-12 md:p-16 relative z-10 fade-in-up">
-        
-        <!-- Header Section -->
-        <header class="text-center mb-12 fade-in-up delay-100">
-            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-semibold tracking-wider mb-4">
-                순천서남교회
-            </span>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 leading-tight mb-4 tracking-tight">
-                하나님의 창조 세계를<br/>돌볼 동역자를 찾습니다.
-            </h1>
-            <h2 class="text-xl sm:text-2xl font-bold text-emerald-600">
-                생태환경위원회<span class="text-base font-normal text-slate-500 ml-2">(가칭)</span> 모집
-            </h2>
-        </header>
+  <!-- Main Views Container -->
+  <main class="app-main">
 
-        <!-- Description Section -->
-        <div class="text-center text-slate-600 text-lg leading-relaxed mb-12 fade-in-up delay-200 max-w-2xl mx-auto space-y-4">
-            <p>
-                우리가 살아가는 지구별, 하나님께서 보시기에 심히 좋았더라 하신 그 아름다운 피조 세계를 지키고 가꾸는 일에 함께할 성도님들을 기다립니다.
-            </p>
-            <p>
-                작은 실천부터 교회 내 생태 친화적인 변화를 이끌어갈 뜻깊은 여정에 동참해 주세요.
-            </p>
+    <!-- VIEW 1: 순례 코스 -->
+    <section id="course-view" class="view active">
+      <div class="hero-banner">
+        <span class="hero-tag">순천생태학교</span>
+        <h1 class="hero-title">순천만 갈대밭 영성훈련<br><span style="font-size: 1.15rem; font-weight: normal; opacity: 0.95;">생태 치유의 길을 걷다</span></h1>
+        <p class="hero-desc" style="margin-bottom: 8px;">
+          최광선 목사의 저서 <strong>『순천만 갈대밭 영성훈련: 생태 치유의 길을 걷다』</strong>(순천에코포럼)의 <strong>제1장부터 제9장까지의 도서 목차 순서대로</strong> 구성되어 있습니다.
+        </p>
+        <p class="hero-desc" style="font-size: 0.88rem; opacity: 0.92;">
+          책이 없어도 스마트폰으로 각 챕터의 5단계 영성훈련(바라보기·말씀과 만남·묵상하기·머물기·실천과 저널) 원문을 읽으실 수 있으며, 현장에서는 '1일 순례 동선순'으로 전환하여 스폿별 묵상을 진행하실 수 있습니다.
+        </p>
+      </div>
+
+      <div class="view-chips">
+        <button class="chip-btn active" id="chip-chapter" onclick="switchListView('chapter')">📖 책 1장~9장 순서 (기본)</button>
+        <button class="chip-btn" id="chip-course" onclick="switchListView('course')">🚶‍♂️ 1일 순례 동선순</button>
+      </div>
+
+      <div id="spot-list-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- VIEW 2: SPOT DETAIL -->
+    <section id="detail-view" class="view">
+      <button class="detail-back-btn" onclick="goBackToList()">
+        ← 순례 목록으로 돌아가기
+      </button>
+
+      <div class="spot-detail-header" id="detail-header-card">
+        <!-- Injected by JS -->
+      </div>
+
+      <!-- 5-Step Stepper Navigation Bar -->
+      <div class="step-stepper-container" id="step-nav-bar">
+        <div class="step-stepper">
+          <button class="step-node active" id="step-node-0" onclick="setStepTab(0)" title="1단계 바라보기">
+            <span class="step-num-badge">1</span>
+            <span class="step-label">바라보기</span>
+          </button>
+          <button class="step-node" id="step-node-1" onclick="setStepTab(1)" title="2단계 말씀과 만남">
+            <span class="step-num-badge">2</span>
+            <span class="step-label">말씀</span>
+          </button>
+          <button class="step-node" id="step-node-2" onclick="setStepTab(2)" title="3단계 묵상하기">
+            <span class="step-num-badge">3</span>
+            <span class="step-label">묵상</span>
+          </button>
+          <button class="step-node" id="step-node-3" onclick="setStepTab(3)" title="4단계 머물기">
+            <span class="step-num-badge">4</span>
+            <span class="step-label">머물기</span>
+          </button>
+          <button class="step-node" id="step-node-4" onclick="setStepTab(4)" title="5단계 실천과 저널">
+            <span class="step-num-badge">5</span>
+            <span class="step-label">실천·저널</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step Content Card -->
+      <div class="step-card" id="step-content-card">
+        <!-- Injected by JS -->
+      </div>
+
+      <!-- Bottom Spot Navigation -->
+      <div class="spot-bottom-nav">
+        <button class="nav-spot-btn" id="btn-prev-spot" onclick="navigateSpot(-1)">
+          <span class="label">이전 장소(스폿)</span>
+          <span id="prev-spot-title">-</span>
+        </button>
+        <button class="nav-spot-btn" id="btn-next-spot" onclick="navigateSpot(1)">
+          <span class="label">다음 장소(스폿)</span>
+          <span id="next-spot-title">-</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW 3: 순례 안내 & 책 소개 -->
+    <section id="guide-view" class="view">
+      <div class="poem-card">
+        <h2 class="poem-title">순천만 생태 영성 순례 안내</h2>
+        <div class="poem-author">순천에코포럼 · 최광선 목사</div>
+
+        <!-- Book & Author Card -->
+        <div style="background: var(--surface-variant); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px; margin: 18px 0;">
+          <div style="font-weight: 800; color: var(--primary); font-size: 1.1rem; margin-bottom: 8px;">
+            📚 원작 도서 및 저자 소개
+          </div>
+          <div style="font-size: 0.95rem; line-height: 1.7; color: var(--text-main);">
+            • <strong>기반 도서</strong>: 『순천만 갈대밭 영성훈련: 생태 치유의 길을 걷다』<br>
+            • <strong>발행처</strong>: 순천에코포럼<br>
+            • <strong>저자</strong>: <strong>최광선 목사</strong><br>
+            <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px; line-height: 1.65;">
+              최광선은 토론토대학교에서 그리스도교 생태영성을 전공하여 박사학위를 받았습니다. 신학교에서 영성신학을 가르쳤고, 지금은 전남 순천에 있는 덕신교회 목사로 하나님 나라와 복음의 한몸 공동체를 꿈꾸며 목회를 하고 있습니다. 순천에코포럼 디렉터와 영성센터 인애 코디네이터로 활동하고 있습니다.
+            </div>
+          </div>
         </div>
 
-        <!-- Action Section (QR Code & Info) -->
-        <div class="flex flex-col md:flex-row items-center justify-center gap-10 fade-in-up delay-300 bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
-            
-            <!-- QR Code -->
-            <div class="flex flex-col items-center group">
-                <div class="w-48 h-48 bg-slate-50 rounded-2xl p-4 shadow-inner border border-slate-200 overflow-hidden relative transition-transform duration-300 hover:scale-105">
-                     <img src="생태환경위원회 모집 QR.jpg" alt="신청 QR코드" class="w-full h-full object-contain rounded-xl" onerror="this.onerror=null; this.src='https://placehold.co/400x400/10b981/ffffff?text=QR+Code';">
-                     <!-- Hover Overlay -->
-                     <div class="absolute inset-0 bg-emerald-500 bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                     </div>
-                </div>
-                <p class="mt-4 font-semibold text-emerald-600 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    스캔하여 신청하기
-                </p>
-            </div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin: 24px 0 10px 0;">
+          🌱 순례의 시작: 왜 순천만인가?
+        </h3>
+        <p class="prose-text" style="font-size: 0.98rem; line-height: 1.85;">
+순례의 시작: 왜 순천만인가?
 
-            <!-- Divider (Desktop) -->
-            <div class="hidden md:block w-px h-32 bg-slate-200"></div>
-            <!-- Divider (Mobile) -->
-            <div class="block md:hidden w-32 h-px bg-slate-200"></div>
+순천만은 대한민국을 대표하는 생태관광지를 넘어, 자연과 인간이 깊이 교감하며 존재의 근원인 하나님을 묵상할 수 있는 특별한 공간입니다. 유네스코 세계자연유산에 등재된 이곳의 광활한 갯벌과 갈대밭, 수많은 생명의 역동적인 움직임은 그 자체로 거대한 영적 순례지가 됩니다. 
 
-            <!-- Contact Text -->
-            <div class="text-center md:text-left space-y-4">
-                <h3 class="text-lg font-bold text-slate-800 mb-2">참여 방법</h3>
-                <ul class="space-y-3 text-slate-600">
-                    <li class="flex items-start gap-3">
-                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">1</span>
-                        <span>좌측의 <strong>QR코드</strong>를 카메라로 스캔하여 온라인 양식을 작성해 주세요.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">2</span>
-                        <span>또는 담당 <strong>목회자에게 직접 말씀</strong>해 주셔도 됩니다.</span>
-                    </li>
-                </ul>
-            </div>
+이 가이드는 단순한 관광을 넘어, 순천만의 자연 요소 하나하나와 깊이 연결되는 '생태 영성 순례'를 제안합니다. 하루 동안 또는 여러 차례 방문하여, 9가지의 묵상 훈련을 통해 '나'를 둘러싼 세계를 새롭게 인식하고, 내면의 치유를 경험하는 여정이 될 것입니다.
+
+참가자들이 하루 동안 무리 없이 9가지 훈련을 경험할 수 있도록, 순천만 갈대밭을 직접 걷는 자연스러운 동선으로 구성한 순례 맵입니다. 각 지점은 단순한 장소가 아닌, 자연과 교감하고 자신을 성찰하는 묵상의 장(場)입니다.
+        </p>
+
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin: 28px 0 10px 0;">
+          🗺️ 1일 순례 타임테이블 (9개 스폿)
+        </h3>
+        <div class="timeline" id="guide-timeline">
+          <!-- Injected by JS -->
         </div>
 
-        <!-- Footer -->
-        <footer class="mt-12 text-center text-sm text-slate-400 font-medium">
-            &copy; 순천서남교회 생태환경위원회
-        </footer>
+        <div class="detail-tip-box" style="margin-top: 24px;">
+          💡 <strong>순례자를 위한 현장 안내</strong><br>
+          • <strong>편안한 준비</strong>: 갈대밭 데크길과 숲길을 걸으므로 편안한 운동화, 모자, 물을 챙기세요.<br>
+          • <strong>물때와 배 시간</strong>: 3스폿(갯벌)은 썰물 시간을, 7스폿(생태체험선)은 승선권 예매 및 운항시간표를 미리 확인하세요.<br>
+          • <strong>침묵의 이동</strong>: 스폿 간 이동 시에는 스마트폰을 잠시 주머니에 넣고, 바람과 갈대 소리를 들으며 침묵으로 걸어보세요.
+        </div>
+      </div>
+    </section>
 
-    </main>
+    <!-- VIEW 4: 나의 묵상 노트 -->
+    <section id="notes-view" class="view">
+      <div class="poem-card">
+        <h2 class="poem-title">✍️ 나의 묵상 기록함</h2>
+        <div class="poem-author">순천만 갈대밭 현장에서 남긴 내 영혼의 고백</div>
+        <p class="prose-text" style="font-size: 0.96rem; margin-bottom: 16px;">
+          각 스폿의 '5. 실천과 저널'에서 작성하신 질문 답변이 스마트폰에 안전하게 자동 저장되어 있습니다. 함께 참여한 조원들과 나누거나 나만의 묵상집으로 보관하실 수 있습니다.
+        </p>
 
+        <div id="notes-list-container">
+          <!-- Injected by JS -->
+        </div>
+
+        <button class="btn-action-large" onclick="shareMyNotes()">
+          📋 내 전체 묵상 노트 복사 / 공유하기
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW 5: 시와 기도 & 프롤로그 -->
+    <section id="prayers-view" class="view">
+      
+      <!-- Prologue -->
+      <div class="poem-card">
+        <h2 class="poem-title">프롤로그 (Prologue)</h2>
+        <div class="poem-author">최광선 · 순천에코포럼</div>
+        <p class="prose-text" style="line-height: 1.95; font-size: 1.02rem;">
+급격히 변화하고 복잡해지는 현대 사회는 많은 이들에게 정신적, 영적 소진을 안겨줍니다. 이러한 상황 속에서 기독교 영성 훈련은 우리 내면을 성찰하고 창조주와의 관계를 깊이 탐색하는 소중한 기회를 제공합니다. 특히 자연 속에서 이루어지는 영성 훈련은 우리의 영혼을 회복시키고 생태적 감수성을 불러일으키며, 삶의 의미를 재발견하는 데 도움을 줍니다.
+
+순천만 갈대밭은 그 자체로 아름다움과 평화를 품고 있습니다. 이곳의 광활한 갈대 군락은 자연의 경이로움을 느끼게 하며, 창조 세계와의 깊은 연결을 경험하게 합니다. 갈대 사이를 스치는 바람 소리와 고요히 흐르는 물길은 마음을 정화하고, 영적 성장에 필요한 깊은 묵상의 시간을 선사합니다. 생명의 보고인 갯벌과 그곳을 찾아드는 철새들. 그들과 함께 어우러진 산과 나무 그리고 밤을 빛내는 별들은 창조주 하나님의 숨결로 충만합니다. 안개 가득한 순천만 갈대밭의 아침은 단순한 관광지가 아니라 생명과 영성의 보고입니다. 창조주가 쓰신 거룩한 책이자, 그분의 숨결로 가득한 성소입니다.
+
+이 소책자는 말씀으로 드리는 기도(lectio divina)의 방법을 창조세계를 묵상하기 위해 5단계로 구성하였습니다. 갈대, 바람, 강과 바다, 갯벌, 철새, 별, 들꽃, 나무, 그리고 안개가 들려주는 생명의 경이로움에 머물러 보십시오. 그 안에서 당신은 하나님과 만물, 그리고 사람이 맺는 코이노니아(koinonia), 즉 생명 공동체의 가장 큰 특징인 사귐을 맛보게 될 것입니다. 이 순례의 길에서 당신의 영혼이 깊은 쉼과 치유, 그리고 새로운 힘을 얻기를 기도합니다.
+
+최광선 (순천에코포럼 디렉터, 영성센터 인애 코디네이터, 순천 덕신교회 목사)
+        </p>
+      </div>
+
+      <!-- Epilogue Prayer -->
+      <div class="poem-card">
+        <h2 class="poem-title">창조 세계와 함께 드리는 기도</h2>
+        <div class="poem-author">에필로그 (Epilogue) · 최광선</div>
+        <p class="prose-text" style="line-height: 1.95; font-size: 1.02rem;">
+순천만 갈대밭에서의 순례는 창조 세계라는 책을 통해 우리에게 말씀하시는 창조주와의 깊은 만남으로 우리를 초대합니다. 우리는 연약한 갈대에서 상처 입은 이들을 감싸 안으시는 하나님의 자비를, 보이지 않는 바람에서 우리를 이끄시는 성령의 숨결을, 끊임없이 흐르는 물결에서 마르지 않는 은총의 강을, 생명의 보고인 갯벌에서 죽음을 이기는 부활의 신비를, 자유로운 새들의 노래에서 존재 자체로 드리는 순수한 찬양을 배웁니다. 또한 어두운 밤하늘의 별들 속에서 길 잃은 우리를 인도하는 희망의 빛을, 척박한 땅의 들꽃에서 지금 이 순간을 충실히 살아내는 지혜를, 그리고 묵묵히 서 있는 나무에게서 깊이 뿌리내리고 아낌없이 나누는 십자가의 영성을 발견합니다.
+
+아시시의 성 프란치스코는 모든 피조물을 '형제', '자매'라 부르며 그들 안에서 하나님의 선하심과 아름다움을 보았습니다. 그에게 자연은 하나님의 현존을 비추는 거울이자, 그분께로 올라가는 영성의 사다리였습니다. 이 순례를 통해 우리 역시 창조 세계가 단순한 배경이나 자원이 아니라, 우리와 함께 창조주를 찬미하는 거룩한 공동체의 일원임을 깨닫게 됩니다.
+
+이제 우리의 일상으로 돌아가, 이곳에서 얻은 영적인 통찰을 삶으로 살아낼 시간입니다. 우리의 삶이 창조주 하나님과, 이웃과, 그리고 모든 피조물과의 단절된 관계를 회복하는 '생태적 그리스도인'의 여정이 되기를 소망합니다. 우리의 모든 행동이, 우리의 모든 숨결이 창조 세계와 함께 드리는 하나의 거대한 기도가 되기를 바랍니다.
+        </p>
+      </div>
+
+      <!-- Jeong Ho-seung Poem -->
+      <div class="poem-card">
+        <h2 class="poem-title">봄길</h2>
+        <div class="poem-author">정호승</div>
+        <div class="poem-body">
+길이 끝나는 곳에서도
+길이 있다
+길이 끝나는 곳에서도
+길이 되는 사람이 있다
+
+스스로 봄길이 되어
+끝없이 걸어가는 사람이 있다
+
+강물은 흐르다가 멈추고
+새들은 날아가 돌아오지 않고
+하늘과 땅 사이의 모든 꽃잎은 흩어져도
+
+보라
+사랑이 끝난 곳에서도
+사랑으로 남아 있는 사람이 있다
+
+스스로 사랑이 되어
+한없이 봄 길을 걸어가는 사람이 있다
+        </div>
+      </div>
+
+      <!-- Psalm 148 -->
+      <div class="poem-card">
+        <h2 class="poem-title">제 148 편</h2>
+        <div class="poem-author">시편 (성경) · 피조물 세계의 우주적 찬양</div>
+        <p class="prose-text" style="font-family: 'Nanum Myeongjo', serif; line-height: 2.05; font-size: 1.02rem;">
+1 할렐루야 하늘에서 여호와를 찬양하며 높은 데서 그를 찬양할지어다
+2 그의 모든 천사여 찬양하며 모든 군대여 그를 찬양할지어다
+3 해와 달아 그를 찬양하며 밝은 별들아 다 그를 찬양할지어다
+4 하늘의 하늘도 그를 찬양하며 하늘 위에 있는 물들도 그를 찬양할지어다
+5 그것들이 여호와의 이름을 찬양함은 그가 명령하시므로 지음을 받았음이로다
+6 그가 또 그것들을 영원히 세우시고 폐하지 못할 명령을 정하셨도다
+7 너희 용들과 바다여 땅에서 여호와를 찬양하라
+8 불과 우박과 눈과 안개와 그의 말씀을 따르는 광풍이며
+9 산들과 모든 작은 산과 과수와 모든 백향목이며
+10 짐승과 모든 가축과 기는 것과 나는 새며
+11 세상의 왕들과 모든 백성들과 고관들과 땅의 모든 재판관들이며
+12 총각과 처녀와 노인과 아이들아
+13 여호와의 이름을 찬양할지어다 그의 이름이 홀로 높으시며 그의 영광이 땅과 하늘 위에 뛰어나심이로다
+14 그가 그의 백성의 뿔을 높이셨으니 그는 모든 성도 곧 그를 가까이 하는 백성 이스라엘 자손의 찬양받을 이시로다 할렐루야
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Bottom App Navigation Bar -->
+  <nav class="bottom-nav">
+    <div class="bottom-nav-inner">
+      <button class="bottom-tab active" id="tab-course" onclick="switchMainView('course-view')">
+        <span class="tab-icon">🌾</span>
+        <span>도서 1장~9장</span>
+      </button>
+      <button class="bottom-tab" id="tab-guide" onclick="switchMainView('guide-view')">
+        <span class="tab-icon">🗺️</span>
+        <span>1일 순례 코스</span>
+      </button>
+      <button class="bottom-tab" id="tab-notes" onclick="switchMainView('notes-view')">
+        <span class="tab-icon">✍️</span>
+        <span>묵상 노트</span>
+      </button>
+      <button class="bottom-tab" id="tab-prayers" onclick="switchMainView('prayers-view')">
+        <span class="tab-icon">🕊️</span>
+        <span>시와 기도</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Floating Toast -->
+  <div id="toast">저장되었습니다.</div>
+
+  <script>
+    const SPOTS = [{"id": "spot1", "order": 1, "time": "오전 08:00", "place": "무진교", "chapter_num": 9, "title": "안개: 불확실성 속에 감추어진 신비", "subtitle": "안개 묵상: 내면과의 대면", "theme": "안개", "color": "#546e7a", "course_desc": "이른 아침, 무진교를 감싸는 물안개 속을 걸으며 순례를 시작합니다. 한 치 앞을 분간하기 어려운 안개는 외부의 소란을 잠재우고 오롯이 내면에 집중하게 합니다.", "tip": "일교차가 큰 봄, 가을 아침에 더욱 신비로운 안개를 만날 수 있습니다. 순천만 습지의 하루는 안개와 함께 시작됩니다.", "visio": {"title": "바라보기 (Visio)", "content": "\"무진에 명산물이 없는 게 아니다. 나는 그것이 무엇인지 알고 있다. 그것은 안개다.... 아침에 잠자리에서 일어나서 밖으로 나오면, 밤사이에 진주해 온 적군들처럼 안개가 무진을 둘러싸고 있는 것이다.... 손으로 잡을 수 없으면서도 그것은 뚜렷이 존재했고, 사람들을 둘러쌌고, 먼 곳에 있는 것으로부터 사람들을 떼어놓았다.\" (김승옥, 『무진기행』)\n\n작가 김승옥은 순천을 모티브로 한 가상의 공간 '무진'의 안개를 탁월하게 묘사한다. 순천만은 일교차가 큰 봄과 가을의 이른 아침이면, 밤새 강물과 바다가 섞이며 피어오른 짙은 물안개(무진, 霧津)로 뒤덮입니다. 시야를 가리는 자욱한 안개는 광활한 갈대밭과 갯벌을 감추며, 순천만을 한 폭의 신비로운 수묵화로 만들어냅니다. 안개 낀 날에는 멀리 있는 경치가 보이지 않습니다. 대신 우리의 감각은 내 발 앞의 한 걸음과 가까운 곳에서 들려오는 물새 소리, 바람에 스치는 갈대 소리에 더욱 예민하게 깨어납니다. 시간이 지나 태양이 떠오르면 안개는 거짓말처럼 걷히고, 이슬을 머금은 피조물들은 감추어졌던 본래의 선명한 아름다움을 찬란하게 드러냅니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "우리가 지금은 거울로 보는 것 같이 희미하나 그 때에는 얼굴과 얼굴을 대하여 볼 것이요 지금은 내가 부분적으로 아나 그 때에는 주께서 나를 아신 것 같이 내가 온전히 알리라 (고린도전서 13:12)", "quote": "하나님을 온전히 사랑하고자 한다면, 지식의 밝은 빛을 버리고 이 '무지의 구름' 속으로 기꺼이 들어가야 한다. (익명의 영성가, 『무지의 구름』)"}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "인생의 순례길을 걷다 보면 한 치 앞도 보이지 않는 짙은 안개 속에 갇힌 듯한 막막함을 느낄 때가 있습니다. 소설가의 묘사처럼 안개는 '먼 곳에 있는 것으로부터 사람을 떼어놓는' 단절과 고립을 가져옵니다. 미래에 대한 불안과 내가 통제할 수 없는 불확실성은 우리를 두렵게 하고 길을 잃은 것 같은 혼란을 줍니다.\n\n그러나 기독교 영성 전통에서 안개와 짙은 구름은 종종 인간의 지성을 넘어선 하나님의 임재를 상징합니다(출애굽기 20:21). 영성가들은 이 시각적 차단을 오히려 '은총의 시간'으로 해석합니다. 인간의 얄팍한 지식과 판단을 내려놓고, 오직 절대자를 향한 신뢰만으로 걸어가야 하는 '무지의 구름(Cloud of Unknowing)' 속으로 들어가는 것입니다.\n\n안개 속에서는 멀리 보려는 조급함을 버려야 합니다. 내 뜻대로 삶을 통제하려는 마음을 내려놓고, 오직 내게 허락된 '오늘 하루, 지금 이 순간의 한 걸음'에만 집중해야 합니다. 앞이 보이지 않기에 역설적으로 우리는 인도자이신 하나님의 손을 더욱 단단히 붙잡게 됩니다. 또한 우리는 안개가 영원하지 않음을 압니다. 하나님의 때에 '의로운 해'가 떠오르면 막막했던 안개는 걷히고, 감추어졌던 섭리와 은혜의 길은 가장 선명하게 그 모습을 드러낼 것입니다. 안개는 우리에게 통제하려는 욕망을 버리고, 겸손한 기다림과 온전한 신뢰를 가르치는 영성 훈련의 장소입니다."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "보이지 않는 길을 신뢰하기", "items": ["안개가 자욱한 이른 아침, 무진교나 갈대밭 데크길에 가만히 서 봅니다.", "시야가 차단된 대신, 피부에 닿는 축축하고 부드러운 안개의 감촉과 귓가에 들리는 자연의 소리에 깊이 집중합니다.", "한 치 앞도 보이지 않는 내 삶의 불확실한 문제들을 떠올립니다. 그것을 억지로 통제하고 앞당겨 보려는 두려움을 내려놓고, '무지의 구름' 속에 숨어 계신 하나님을 신뢰하기로 결단합니다.", "\"주님, 멀리 보이지 않아도 내 한 걸음을 비추시는 당신을 신뢰합니다\"라고 고백하며, 믿음으로 천천히 한 걸음씩 내디뎌 봅니다."]}, "actio": {"title": "실천 (Actio)", "subtitle": "조급함을 내려놓는 기다림", "items": ["영적 실천: 당장 해답이 보이지 않는 인생의 문제를 두고, 조급한 결정을 내리기보다 하나님의 때를 기다리며 하루 15분씩 침묵으로 머무는 시간을 갖습니다.", "관계적 실천: 타인을 내 잣대로 다 안다고 속단하지 않고, '다 알 수 없는 신비로운 존재'로 존중하며 있는 그대로 바라보는 훈련을 합니다.", "생태적 실천: 건강한 자연의 안개가 아닌, 인간의 탐욕이 만들어낸 짙은 미세먼지(스모그)를 줄이기 위해 일회용품 사용과 탄소 배출을 줄이는 불편함을 기꺼이 감수합니다."]}, "journaling": ["지금 내 삶에서 가장 안개처럼 막막하고 불확실한 영역은 어디입니까?", "앞이 보이지 않을 때, 나는 불안해하며 통제하려 합니까, 아니면 하나님의 인도하심을 신뢰하며 기다립니까?", "안개가 걷힌 후 보게 될 섭리를 기대하며, 오늘 내가 내디뎌야 할 '믿음의 한 걸음'은 무엇입니까?"]}, {"id": "spot2", "order": 2, "time": "오전 09:00", "place": "갈대밭 데크길", "chapter_num": 1, "title": "갈대: 상처 입은 치유자", "subtitle": "갈대 묵상: 흔들림 속의 견고함", "theme": "갈대", "color": "#8d6e63", "course_desc": "광활한 갈대밭 데크길을 걸으며 바람에 흔들리면서도 꺾이지 않는 갈대를 통해, 유연함 속에 숨겨진 견고한 생명력을 성찰합니다.", "tip": "아침 햇살에 비치는 갈대의 모습은 고요한 아름다움을 선사합니다. 사람들의 발길이 뜸한 시간에 온전히 갈대밭을 느껴보세요.", "visio": {"title": "바라보기 (Visio)", "content": "순천만은 세계 5대 연안습지 중 하나로, 약 160만 평의 갈대밭이 광활한 갯벌 위로 그림처럼 펼쳐져 있습니다. 강물과 바닷물이 만나는 기수역에 퇴적층이 쌓이면 갈대와 같은 염생식물이 군락을 이루고, 그 너머로 갯벌이 형성됩니다. 순천만은 이러한 갯벌의 발달 과정 전체를 볼 수 있는 유일한 곳입니다.\n\n갈대는 스스로 정화하는 식물입니다. 순천 시민이 배출하는 생활하수의 부유물을 양분으로 삼아 육지와 바다를 동시에 정화하며, 오염된 물이 바다로 흘러가기 전 마지막 필터 역할을 합니다. 한 포기의 갈대는 연약하지만, 군락을 이룬 갈대밭은 거센 바람도 견뎌냅니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "상한 갈대를 꺾지 아니하며 꺼져가는 등불을 끄지 아니하고 진실로 정의를 시행할 것이며 (이사야 42:3)", "quote": "인간은 생각하는 갈대이다. (블레즈 파스칼 (Blaise Pascal), 『팡세』)"}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "성경에서 '상한 갈대'는 육체적으로나 정신적으로 상처 입고 짓눌려 절망에 빠진 인간을 상징합니다. 실용적 가치가 없기에 꺾어버리는 것이 당연해 보이지만, 이사야 선지자는 오실 메시아가 그 상한 갈대를 꺾지 않으실 것이라 예언합니다. 이는 절망하고 상처 입은 모든 존재에게 새로운 생명과 희망을 주시는 치유의 메시지입니다.\n\n갈대는 연약하지만 바람에 흔들리며 더욱 강인해집니다. 우리의 삶 또한 시련 속에서 유연함을 잃지 않을 때, 꺾이지 않고 다시 일어설 힘을 얻습니다. 군락을 이룬 갈대밭은 거센 바람도 견뎌냅니다. 서로에게 기댄 갈대들을 보며, 우리는 홀로 살아가는 존재가 아니라 공동체 안에서 더 큰 힘을 발휘할 수 있음을 깨닫습니다.\n\n이곳 순천만에서 우리는 '상한 갈대를 꺾지 않으시는' 하나님의 긍휼을 마주합니다. 연약하기에 더불어 살아가고, 상처 입었기에 서로를 보듬는 갈대의 모습에서, 우리는 가장 낮은 곳으로 임하시는 신비를 경험합니다. 연약한 갈대는 물을 정화하고, 수많은 생명에게 안식처를 제공합니다. 상처 입은 존재가 오히려 다른 생명을 살리는 치유자가 되는 역설입니다. 우리의 영적 여정 역시 이와 같습니다. 자신의 연약함과 부서진 상처를 숨기지 않고 있는 그대로 받아들일 때, 그 상처는 다른 이를 품고 피조물 세계를 회복시키는 긍휼의 통로가 됩니다."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "연약함 수용하기", "items": ["갈대밭 데크길을 천천히 걸으며 바람에 흔들리는 갈대의 움직임에 집중해 보세요.", "갈대의 연약함과 유연함을 바라보며, 내 안에 있는 연약함과 상처를 판단 없이 그대로 인정하고 받아들입니다.", "'상한 갈대를 꺾지 않으신다'는 말씀을 되뇌며, 어떤 모습이든 나를 있는 그대로 사랑하시는 창조주의 은혜에 의탁하는 기도를 드려보세요.", "갈대 군락이 서로를 지탱하듯, 내 삶을 지지해주는 공동체(가족, 친구, 신앙 공동체)를 떠올리며 감사의 마음을 가져봅니다."]}, "actio": {"title": "실천 (Actio)", "subtitle": "상처를 치유의 통로로", "items": ["이번 주: 내 삶 안에 있는 아직 치유되지 않은 상처 하나를 구체적으로 떠올리고, 그것을 신뢰하는 한 사람에게 나눕니다.", "생태적 실천: 순천만 갈대밭 보전을 위한 시민단체 활동이나 정화 봉사에 참여합니다.", "공동체적 실천: 내가 속한 공동체에서 '상한 갈대' - 상처받고 소외된 이 - 를 눈여겨보고 그 옆에 함께 있어줍니다."]}, "journaling": ["오늘 갈대를 바라보며 내 마음에 먼저 떠오른 것은 무엇입니까?", "나는 지금 어떤 부분에서 '상한 갈대' 같습니까?", "내 연약함이 다른 사람을 도운 경험이 있다면 무엇입니까?"]}, {"id": "spot3", "order": 3, "time": "오전 10:00", "place": "갯벌 관찰 데크", "chapter_num": 4, "title": "갯벌: 죽음과 생명의 경계", "subtitle": "갯벌 묵상: 비움과 채움의 신비", "theme": "갯벌", "color": "#4e342e", "course_desc": "물이 빠져나간 갯벌의 숨구멍과 생명들의 움직임을 관찰하며, 모든 것을 비워내야 다시 채워지는 자연의 순리와 비움의 영성을 묵상합니다.", "tip": "방문 전 물때표를 확인하여 갯벌이 드러나는 시간에 맞춰 방문하는 것이 핵심입니다. 망원경을 준비하면 더욱 생생한 관찰이 가능합니다.", "visio": {"title": "바라보기 (Visio)", "content": "순천만 갯벌은 690만 평에 달하는 광활한 생명의 터전입니다. 2006년 람사르 협약에 등록되었으며, 2021년 유네스코 세계유산으로 등재되었습니다. 겉보기에는 검고 황량한 진흙 땅 같지만, 그 속에는 수많은 생명이 꿈틀대고 있습니다. 짱뚱어, 게, 조개, 갯지렁이 등 다양한 저서생물들은 갯벌의 오염물질을 분해하고 정화하는 중요한 역할을 합니다. 이 풍성한 생명력은 흑두루미와 같은 국제적 희귀 철새들을 불러 모으는 근원이 됩니다. 갯벌은 밀물 때는 바다에 잠기고 썰물 때는 육지를 드러내며, 끊임없이 죽음과 생명을 반복하는 역동적인 공간입니다. 이곳은 지구상에서 생물 생산성이 가장 높은 생태계 중 하나로, '지구의 콩팥'이라 불립니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "그 진펄과 개펄은 되살아나지 못하고 소금 땅이 될 것이며 (에스겔 47:11)\n나를 기가 막힐 웅덩이와 수렁에서 끌어올리시고 내 발을 반석 위에 두사 내 걸음을 견고하게 하셨도다 (시편 40:2)", "quote": "거룩함은 저 높은 하늘에만 있는 것이 아니라, 우리가 밟고 선 갯벌 속에도 깃들어 있습니다."}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "에스겔 선지자는 성전에서 흘러나온 생명수가 닿는 곳마다 모든 것이 살아나는 환상을 봅니다. 죽음의 바다(사해)조차 소생하지만, 유독 '진펄과 개펄'만은 되살아나지 못하고 소금 땅으로 남습니다. 이는 생명의 물, 즉 하나님의 은혜와 말씀을 받아들이지 않고 스스로를 고립시키는 완고한 마음을 상징합니다. 흙탕물이 계속 유입되어 쌓이고 물 빠짐이 원활하지 않아 염분이 축적된 땅은 생명을 품을 수 없습니다. 이는 우리 심령에 세상의 죄악과 불신이 쌓여 마음이 굳어지는 것과 같습니다.\n\n그러나 순천만의 갯벌에 서면, 우리는 이 진펄이 단순한 심판의 대상이나 죽음의 땅이 아님을 깨닫습니다. 갯벌은 그 자체로 창조주의 숨결을 호흡하며 우주적 사귐에 동참하는 거룩하고 신성한 주체입니다. 갯벌의 작은 생명체, 짱뚱어와 게들은 끊임없이 굴을 파고 땅을 뒤집으며 갯벌을 숨 쉬게 합니다. 이처럼 작고 보잘것없어 보이는 존재들의 끊임없는 움직임이 거대한 생태계를 건강하게 유지합니다. 우리 역시 피조물을 수단으로 대하던 교만을 버리고, 진흙 속 생명들과 동등한 창조 세계의 일원으로서 생명의 신비에 경외감을 가지고 참여해야 합니다.\n\n갯벌의 어둡고 축축한 밑바닥, 그 거칠고 투박한 물질 속에서 성스러운 생명의 맥박이 뛰고 있습니다. 거룩함은 저 높은 하늘에만 있는 것이 아니라, 우리가 밟고 선 갯벌 속에도 깃들어 있습니다."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "갯벌과 하나되기", "items": ["갯벌 가까이 안전한 곳에 서거나 앉아봅니다. 눈을 감고 갯벌의 냄새(짠 내, 흙 내음)를 깊이 맡아보세요. (후각)", "갯벌에서 들려오는 소리(물소리, 새소리, 바람 소리, 작은 생물들의 움직임)에 귀를 기울여봅니다. (청각)", "눈을 뜨고 갯벌의 색과 질감, 빛의 반사, 생명체들의 움직임을 가만히 관찰합니다. (시각)", "가능하다면 안전하게 손끝으로 갯벌의 감촉을 느껴봅니다. (촉각)", "이 모든 감각을 통해 갯벌의 생명력을 느끼며, 내 안의 굳어진 마음(진펄과 개펄)을 발견하고, 그것이 부드러워져 생명의 은혜를 받아들이기를 기도합니다."]}, "actio": {"title": "실천 (Actio)", "subtitle": "생명을 살리는 겸손한 행동", "items": ["생태적 실천: 갯벌 생태계를 위협하는 미세 플라스틱 오염을 줄이기 위해 플라스틱 사용을 줄이고, 갯벌 정화 활동에 참여합니다.", "영적 실천: 내 마음의 '진펄과 개펄' - 굳어진 편견, 용납하지 못하는 마음을 한 가지 구체적으로 적고, 그것이 녹아지기를 기도하며 작은 변화를 시도합니다.", "공동체적 실천: 짱뚱어처럼 작지만 꼭 필요한, 눈에 띄지 않는 섬김의 역할을 내 공동체 안에서 찾아 실천합니다."]}, "journaling": ["지금 내 마음의 '진펄과 개펄' - 생명이 들어오지 못하도록 굳어진 곳은 어디입니까?", "갯벌의 짱뚱어처럼, 작지만 생태계(공동체)를 살리는 나의 역할은 무엇입니까?", "창조 세계에 대한 나의 태도를 돌아볼 때, '생태적 회개'가 필요한 부분은 무엇입니까?"]}, {"id": "spot4", "order": 4, "time": "오전 11:00", "place": "용산전망대 숲길", "chapter_num": 8, "title": "나무: 뿌리 깊은 영성", "subtitle": "나무 묵상: 뿌리내림과 하늘 향함", "theme": "나무", "color": "#2e7d32", "course_desc": "용산전망대로 오르는 숲길에서 마음에 드는 나무를 정해 깊은 뿌리내림과 하늘을 향해 뻗어가는 모습을 통해, 신앙의 기초와 성장의 방향을 묵상합니다.", "tip": "오르막길이지만, 천천히 걸으며 숲이 주는 안정감과 피톤치드를 느껴보세요.", "visio": {"title": "바라보기 (Visio)", "content": "순천만 습지의 전경을 보기 위해 오르는 용산전망대 길은 울창한 소나무 숲과 대나무 숲으로 이어집니다. 또한 순천만 국가정원의 나무도감원에는 느티나무, 팽나무, 황칠나무 등 다양한 나무들이 저마다의 이야기를 품고 자라고 있습니다. 나무는 깊이 뿌리내려 땅의 양분을 빨아들이고, 하늘을 향해 가지를 뻗어 빛을 받습니다. 여름에는 시원한 그늘을 만들어 주고, 가을에는 아름다운 열매를 맺으며, 겨울의 모진 비바람을 묵묵히 견뎌냅니다. 나무는 버릴 것이 하나도 없습니다. 잎은 퇴비가 되고, 줄기는 땔감이나 건축 자재가 되며, 뿌리는 약재로 쓰이기도 합니다. 나무는 침묵 속에서 성장하고, 아낌없이 나누며, 모든 생명에게 쉼터를 제공하는 존재입니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "나는 참포도나무요 내 아버지는 농부라 무릇 내게 붙어 있어 열매를 맺지 아니하는 가지는 아버지께서 그것을 제거해 버리시고 무릇 열매를 맺는 가지는 더 열매를 맺게 하려 하여 그것을 깨끗하게 하시느니라 (요한복음 15:1-2)\n복 있는 사람은 악인들의 꾀를 따르지 아니하며 그는 시냇가에 심은 나무가 철을 따라 열매를 맺으며 그 잎사귀가 마르지 아니함 같으니 그가 하는 모든 일이 다 형통하리로다 (시편 1:1, 3)", "quote": "나무 아래 서는 것은, 조건 없는 사랑과 희생의 그늘 아래로 들어가는 것과 같습니다."}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "예수님은 자신을 '참포도나무'에, 우리를 '가지'에 비유하셨습니다. 가지가 나무에 붙어 있을 때만 생명을 유지하고 열매를 맺을 수 있듯이, 우리의 영적 생명 또한 근원이신 하나님 안에 깊이 뿌리내릴 때만 풍성해질 수 있습니다. 나무는 우리에게 '뿌리 내림'의 중요성을 가르칩니다. 시편 1편은 복 있는 사람을 '시냇가에 심은 나무'에 비유합니다. 영적 뿌리를 내리는 구체적인 방법은 하나님의 말씀(토라)을 날마다 묵상하는 것입니다. 깊은 뿌리는 가뭄에도 마르지 않는 생명력의 근원입니다. 분주하고 피상적인 관계가 만연한 세상 속에서, 나무는 보이지 않는 곳에서부터 깊이 뿌리내리는 침묵의 시간이 필요함을 일깨웁니다. 든든한 뿌리가 있어야만 비바람에 흔들리지 않고 곧게 서서 성장할 수 있습니다.\n\n나무는 '아낌없이 주는 존재'입니다. 포도나무가 자신을 위해서가 아니라 나그네의 목마름을 해결해주기 위해 열매를 맺듯, 나무의 존재 이유는 나눔과 베풂에 있습니다. 자신의 몸을 내어 땔감이 되고, 그늘이 되어주며, 열매를 맺는 나무의 모습은 자신을 온전히 내어주신 예수 그리스도의 십자가 사랑을 떠올리게 합니다. 나무 아래 서는 것은, 그 조건 없는 사랑과 희생의 그늘 아래로 들어가는 것과 같습니다. 나무와의 교감을 통해 우리는 침묵, 성장, 나눔, 그리고 쉼이라는 깊은 영성을 배울 수 있습니다."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "나무와 연결되기", "items": ["마음에 드는 나무 한 그루를 정해 그 앞에 섭니다. 손으로 나무껍질의 질감을 느껴보고, 나무에 등을 기대고 앉아봅니다.", "눈을 감고 내가 나무의 일부가 되었다고 상상합니다. 발끝부터 땅속 깊이 뿌리가 뻗는 것을 느껴봅니다. 안정감과 땅과의 연결됨을 느껴보세요.", "들숨에 땅의 영양분과 생명력이 뿌리를 통해 온몸으로 올라오는 것을, 날숨에 하늘을 향해 가지가 뻗어 나가는 것을 상상합니다.", "참포도나무이신 예수님께 굳건히 연결되기를 기도합니다. \"주님, 당신 안에 깊이 뿌리내려 사랑의 열매를 맺게 하소서.\""]}, "actio": {"title": "실천 (Actio)", "subtitle": "깊이 뿌리내리는 삶", "items": ["영적 실천: 이번 달부터 매일 아침 10분씩 성경 묵상(렉시오 디비나)을 실천합니다. 이것이 가장 깊은 뿌리 내리기입니다.", "관계적 실천: 내가 그늘이 되어줄 수 있는 한 사람 - 지치고 쉼이 필요한 이 - 을 위해 구체적인 섬김을 계획합니다.", "생태적 실천: 나무 한 그루를 심거나, 나무 심기 운동에 참여합니다. 산림청의 1인 1나무 심기 운동에 동참합니다."]}, "journaling": ["지금 내 영성의 '뿌리'는 어디에 내려져 있습니까? 그 뿌리는 얼마나 깊습니까?", "나는 지금 어떤 '열매'를 맺고 있습니까? 그 열매는 나 혼자를 위한 것입니까, 다른 이를 위한 것입니까?", "내가 '그늘'이 되어줄 수 있는 사람은 누구입니까?"]}, {"id": "spot5", "order": 5, "time": "오후 14:00", "place": "순천만 방죽길", "chapter_num": 2, "title": "바람: 보이지 않는 이끄심", "subtitle": "바람 묵상: 영의 숨결", "theme": "바람", "color": "#0288d1", "course_desc": "방죽길에 온몸으로 바람을 맞으며, 보이지 않지만 모든 것을 움직이는 성령의 숨결과 자유롭게 하시는 은총을 경험합니다.", "tip": "방죽길은 갈대밭과 바다 전경을 한눈에 담으며 바람을 느끼기에 최적의 장소입니다.", "visio": {"title": "바라보기 (Visio)", "content": "바람은 눈에 보이지 않지만, 그 존재를 부정할 수 없습니다. 나뭇잎을 흔들고, 갈대숲을 스치고, 우리의 피부에 닿으며 끊임없이 움직이고 우리를 감쌉니다. 순천만 갈대밭에 서면, 바람은 온몸으로 느껴지는 실재가 됩니다. 10리에 걸쳐 펼쳐진 갈대밭이 바람에 일제히 눕고 일어서며 만들어내는 소리와 황금빛 물결은 경이로운 자연의 교향곡입니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "바람은 불고 싶은 대로 분다. 너는 그 소리를 들어도 어디서 불어와서 어디로 가는지 모른다. 성령으로 난 사람도 다 이와 같다 (요한복음 3:8)", "quote": "영적인 삶이란 무엇보다도, 나무 사이를 지나는 바람처럼 우리 안에서 움직이시는 성령의 움직임을 알아차리는 것이다. (토머스 머튼, 『새 명상의 씨앗』)"}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "갈대숲을 가로질러 불어오는 시원한 바람은 단순한 대기의 흐름을 넘어, 태초에 혼돈과 공허 위를 운행하시던 창조주의 숨결(Ruach)입니다. 뺨을 스치며 이마에 맺힌 땀방울을 식혀 주는 그 청량한 서늘함은, 무겁게 가라앉고 정체된 우리의 내면을 부드럽게 흔들어 깨우는 영적 각성의 순간입니다. 상처 입은 피조물 세계의 탄식과 우리 삶의 메마른 자리 위로 이 거룩한 하나님의 숨결이 생기처럼 다시 불어올 때, 비로소 낡고 죽어진 것들은 흩어지고 만물을 소생케 하시는 생명의 역동, 곧 경이로운 새로운 창조가 다시 시작됩니다.\n\n성경과 영성가들은 이 바람을 하나님의 숨결, 즉 성령(히브리어 '루아흐', 라틴어 '스피리투스')의 상징으로 여깁니다. 예수님은 니고데모와의 대화에서 성령의 역사를 바람에 비유하셨습니다. 바람이 어디서 와서 어디로 가는지 알 수 없지만 그 움직임을 분명히 느끼듯, 성령의 일하심 또한 우리의 이해를 넘어서지만 그분의 이끄심과 임재를 삶 속에서 체험할 수 있습니다. 바람은 보이지 않는 하나님의 현존을 일깨웁니다.\n\n갈대밭의 바람은 우리 내면의 불순물을 날려 보내고 가장 순수한 요소만을 남기는 정화의 힘을 상징하기도 합니다. 십자가의 성 요한은 하나님을 갈망하는 영혼이 바람이 공기를 정화하듯 깨끗해져야 한다고 말했습니다. 불필요한 집착과 욕망을 내려놓고 오직 하나님께만 집중하는 정화의 과정은 영적 여정에서 필수적입니다. 순천만 갈대밭을 채우는 하나님의 숨결 안에서 호흡하며, 그분과의 온전한 합일을 경험해 봅시다."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "바람에 맡기기", "items": ["갈대밭이 잘 보이는 곳에 서서 눈을 감고 바람을 느껴봅니다. 피부에 닿는 바람의 감촉, 귓가를 스치는 소리에 집중하세요.", "숨을 깊게 들이마시고 내쉬면서, 내 안의 무거운 짐, 걱정, 불순한 욕망들을 하나씩 떠올립니다.", "숨을 내쉴 때마다 그 짐들이 바람에 실려 멀리 날아가는 모습을 상상합니다. \"주님, 이 모든 것을 당신의 바람에 맡깁니다.\"라고 기도하세요.", "마음이 정화되고 가벼워지는 것을 느끼며, 텅 빈 마음에 하나님의 숨결, 즉 성령께서 채워주시기를 청하는 기도를 드립니다."]}, "actio": {"title": "실천 (Actio)", "subtitle": "내려놓음의 실천", "items": ["지금 이 자리에서: 종이에 내가 내려놓아야 할 것 하나를 적고, 마음 속으로 그것을 바람에 날립니다.", "이번 달: 스마트폰 없이 자연 속에서 30분 이상 걷는 시간을 주 1회 갖습니다.", "생태적 실천: 탄소 발자국을 줄이는 구체적인 행동 하나를 결심합니다. (예: 대중교통 이용, 에너지 절약)"]}, "journaling": ["지금 나를 가장 무겁게 짓누르는 걱정이나 집착은 무엇입니까?", "'성령의 이끄심'을 삶에서 느꼈던 경험이 있다면 무엇입니까?", "바람처럼 자유롭게 살기 위해 내가 내려놓아야 할 것은 무엇입니까?"]}, {"id": "spot6", "order": 6, "time": "오후 15:00", "place": "순천만습지 입구 염습지", "chapter_num": 7, "title": "들꽃: 지금 여기의 아름다움", "subtitle": "들꽃 묵상: 작고 낮은 것들의 아름다움", "theme": "들꽃", "color": "#c2185b", "course_desc": "갯벌 초입, 척박한 환경에서 피어난 칠면초와 작은 들꽃을 통해 가장 낮은 곳에 임하는 신의 사랑과 겸손의 아름다움을 발견합니다.", "tip": "칠면초는 가을에 붉게 물들지만, 다른 계절의 푸른 모습도 그 자체로 아름답습니다. 발밑의 작은 생명에 집중하는 시간입니다.", "visio": {"title": "바라보기 (Visio)", "content": "순천만 갯벌은 단순히 검은 흙과 갈대만 있는 곳이 아닙니다. 자세히 들여다보면 짠 소금기를 이겨내고 피어난 특별한 식물, 염생식물들의 다채로운 꽃밭을 만날 수 있습니다. 갯벌 상부의 염습지에는 칠면초, 갯개미취, 해홍나물, 퉁퉁마디 등이 자랍니다. 특히 칠면초는 계절에 따라 녹색에서 붉은색으로 일곱 번 색이 변한다고 하여 붙여진 이름으로, 가을이면 갯벌을 붉은 카펫처럼 물들여 황금빛 갈대와 어우러져 신비로운 풍경을 자아냅니다. 누가 일부러 씨를 뿌리거나 가꾸지 않아도, 척박한 환경 속에서 저마다의 모습으로 피어나는 들꽃들은 강인한 생명력 그 자체입니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "모든 육체는 풀이요 그의 모든 아름다움은 들의 꽃과 같으니 풀은 마르고 꽃은 시드나 우리 하나님의 말씀은 영원히 서리라 하라 (이사야 40:6-8)\n들의 백합화가 어떻게 자라는가 생각하여 보라 수고도 아니하고 길쌈도 아니하느니라 그러나 내가 너희에게 말하노니 솔로몬의 모든 영광으로도 입은 것이 이 꽃 하나만 같지 못하였느니라 (마태복음 6:28-29)", "quote": "들의 백합화가 어떻게 자라는가 생각하여 보라 (마태복음 6:28)"}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "이사야 선지자는 인생의 유한함과 덧없음을 '마르는 풀'과 '시드는 꽃'에 비유했습니다. 화려하게 피었다가 이내 사라지는 들꽃의 모습은 우리에게 삶의 순간성을 일깨워 줍니다. 그러나 바로 그 유한함 때문에 들꽃의 존재는 더욱 소중하고 아름답습니다. 영원하지 않기에, 지금 이 순간의 아름다움에 온전히 집중하게 합니다. 이는 우리에게 '무엇을 먹을까, 무엇을 입을까' 하는 미래에 대한 염려에서 벗어나, '지금 여기'의 삶을 충실히 누리라는 가르침을 줍니다.\n\n들꽃은 또한 하나님의 돌보심 안에 피어납니다. 예수님은 \"들의 백합화가 어떻게 자라는가 생각하여 보라\" 하시며, 스스로 아무것도 하지 않는 것처럼 보이는 들꽃 하나도 하나님께서 입히시고 기르신다고 말씀하셨습니다. 이는 우리 삶이 자신의 노력만으로 이루어지는 것이 아니라, 보이지 않는 더 큰 섭리와 은혜 안에서 유지되고 있음을 깨닫게 합니다. 척박한 소금기 땅에서 피어나는 순천만의 염생식물들은 어떤 환경 속에서도 생명을 피워내시는 창조주의 능력을 증거합니다. 그 작은 꽃 한 송이에서 우리는 우주를 창조하신 하나님의 섬세한 손길과 사랑을 발견할 수 있습니다."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "들꽃과 대화하기", "items": ["길가나 갯벌 주변에 핀 작은 들꽃 하나를 찾아 그 앞에 조용히 앉습니다.", "꽃의 모양, 색깔, 잎사귀의 질감, 향기 등 모든 세부 사항을 오감을 동원해 관찰합니다. 판단이나 분석 없이, 있는 그대로의 모습을 받아들입니다.", "이 작은 생명이 척박한 환경을 뚫고 피어나기까지의 과정을 상상해 봅니다. 그 생명력에 경외감을 느껴봅니다.", "\"너는 참 아름답구나. 너를 만드신 분은 얼마나 더 아름다우실까?\"와 같이 꽃에게 말을 걸거나, 꽃을 통해 창조주께 감사의 기도를 드립니다. 이 순간, 꽃은 단순한 식물이 아니라 신성한 만남의 통로가 됩니다."]}, "actio": {"title": "실천 (Actio)", "subtitle": "'지금 여기'를 충실히 살기", "items": ["오늘: 스마트폰을 잠시 내려놓고, 식사할 때 오직 음식의 맛, 향기, 색깔에만 집중하는 '천천히 먹기'를 실천합니다.", "이번 주: 매일 아침 집 근처의 꽃이나 나무 하나를 찾아 그 변화를 관찰하고 기록합니다.", "생태적 실천: 외래종 식물이 토종 들꽃을 위협하는 문제를 인식하고, 토종 식물 보호 활동에 관심을 갖습니다."]}, "journaling": ["지금 이 순간, 내가 감사하지 못하고 당연하게 여겨온 '들꽃 같은 아름다움'은 무엇입니까?", "내 삶의 '척박한 소금기 땅'에서 피어난 아름다움이 있다면 무엇입니까?", "미래에 대한 염려 때문에 '지금 여기'의 충만함을 놓치고 있는 것은 무엇입니까?"]}, {"id": "spot7", "order": 7, "time": "오후 16:00", "place": "생태체험선", "chapter_num": 3, "title": "물: 만남과 흘러감의 신비", "subtitle": "물 묵상: 모든 것을 품는 은총", "theme": "물", "color": "#00838f", "course_desc": "생태체험선에 몸을 싣고 S자 수로를 따라 바다로 나아가는 물의 흐름 속에서, 모든 것을 받아주고 정화하여 바다로 이끄는 은총의 흐름을 묵상합니다.", "tip": "생태체험선 운항 시간을 미리 확인하여 다음 일정에 차질이 없도록 계획하세요. 물 위에서 바라보는 순천만은 또 다른 감동을 선사합니다.", "visio": {"title": "바라보기 (Visio)", "content": "순천만은 동천과 이사천, 두 강물이 바다와 만나는 기수역에 형성된 거대한 습지입니다. 민물과 바닷물이 섞이는 이곳은 독특한 생태계를 이루며, 밀물과 썰물의 역동적인 리듬에 따라 시시각각 모습을 바꿉니다. 썰물 때는 광활한 갯벌이 속살을 드러내고, 밀물 때는 S자 물길을 따라 바닷물이 들어와 갈대밭을 적십니다. 이 끊임없는 만남과 변화, 그리고 멈추지 않는 흐름 속에서 순천만의 풍요로운 생명이 유지됩니다. 생태체험선을 타면 이 물길을 따라 순천만 앞바다까지 나아가며 물의 역동성을 온몸으로 체험할 수 있습니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "나를 믿는 자는 성경에 이름과 같이 그 배에서 생수의 강이 흘러나오리라 (요한복음 7:38)", "quote": "가장 좋은 것은 물과 같다 (상선약수 上善若水, 도덕경 8장)"}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "순천만의 물은 '만남'의 신비를 보여줍니다. 서로 다른 성질의 강물과 바닷물이 만나 새로운 생명의 공간인 기수역을 창조하듯, 우리의 삶도 다양한 만남을 통해 더욱 풍요로워집니다. 타자와의 만남, 익숙함과 낯섦의 교차는 때로 갈등과 혼란을 주지만, 결국 우리를 더 넓고 깊은 존재로 빚어냅니다. 밀물과 썰물의 '변화'는 삶의 자연스러운 리듬을 받아들이는 법을 가르칩니다. 모든 것이 가득 차오르는 때가 있는가 하면, 모든 것이 빠져나가 비워지는 때도 있습니다. 이 순환을 거스르지 않고 자연스럽게 받아들일 때, 우리는 삶의 고저(高低) 속에서 평온을 찾을 수 있습니다.\n\n예수님은 자신을 믿는 자의 배에서 '생수의 강'이 흘러나올 것이라고 약속하셨습니다. 이는 성령을 통해 우리 안에 내주하시는 하나님의 은총이 마르지 않고 끊임없이 흘러넘쳐, 자신뿐 아니라 주변까지 살리는 생명력이 됨을 의미합니다. 순천만의 물길처럼, 하나님의 은혜는 높은 곳에서 낮은 곳으로, 중심에서 변방으로 '흘러갑니다'. 이 흐름에 우리 자신을 맡길 때, 우리는 정체되지 않고 끊임없이 새로워지며 생명을 나누는 통로로 살아갈 수 있습니다. 성 프란치스코가 '누이'라 부르며 찬미했던 물의 겸손함과 유용함 속에서, 우리는 섬김과 나눔의 영성을 배웁니다."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "은총의 흐름에 맡기기", "items": ["물가에 앉아 물길의 흐름을 조용히 바라봅니다.", "강물과 바닷물이 만나 섞이고, 밀물과 썰물이 교차하는 모습을 보며 내 삶의 다양한 만남과 변화의 순간들을 떠올려 봅니다.", "멈추지 않고 바다로 흘러가는 물처럼, 내 삶에 끊임없이 흘러 들어오는 하나님의 은혜를 묵상합니다. 내가 붙들고 놓지 못하는 것은 무엇인지, 은혜의 흐름을 막고 있는 것은 무엇인지 성찰합니다.", "\"주님, 제 삶을 당신의 생명수 강에 온전히 맡깁니다. 저를 통해 당신의 은혜가 필요한 곳으로 흘러가게 하소서\"라고 기도하며, 나를 통해 세상을 축복하는 통로가 되기를 서원합니다."]}, "actio": {"title": "실천 (Actio)", "subtitle": "생명의 물을 나누는 삶", "items": ["이번 주: 내가 막고 있는 '흐름' - 용서하지 못한 관계, 나누지 못한 것 - 하나를 성찰하고 구체적 화해의 시도를 합니다.", "생태적 실천: 순천만 수질 보전을 위해 생활 속 물 사용량을 줄이고 합성 세제 사용을 줄입니다.", "공동체적 실천: 내 삶의 '기수역' - 서로 다른 사람들이 만나는 경계 지점 - 을 적극적으로 만들어 새로운 생명 공간을 창조합니다."]}, "journaling": ["내 삶에서 가장 풍요로운 '만남'은 어떤 것이었습니까?", "지금 내 삶에서 '썰물의 시간'(비워지고 드러나는 때)을 경험하고 있습니까, '밀물의 시간'을 경험하고 있습니까?", "하나님의 은혜가 더 잘 흐르기 위해 무엇을 내려놓아야 합니까?"]}, {"id": "spot8", "order": 8, "time": "오후 17:30", "place": "갈대밭 인근 및 철새도래지", "chapter_num": 5, "title": "새: 자유를 향한 노래", "subtitle": "철새 묵상: 존재의 찬양", "theme": "새", "color": "#ef6c00", "course_desc": "일몰 무렵, 보금자리로 돌아오는 철새들의 화려한 군무를 바라보며, 어떤 조건 없이 그저 존재하는 것만으로도 기쁨이 되는 순수한 존재의 찬양을 드립니다.", "tip": "10월 말부터 3월 초까지 흑두루미의 군무를 볼 수 있습니다. 해 질 녘 '골든 아워'에 방문하면 황금빛으로 물든 풍경을 만끽할 수 있습니다.", "visio": {"title": "바라보기 (Visio)", "content": "순천만은 '새들의 낙원'입니다. 우리나라 전체 조류 400여 종의 절반가량인 약 252종의 새를 이곳에서 만날 수 있습니다. 특히 천연기념물이자 국제적 희귀조인 흑두루미, 저어새, 황새, 큰고니 등 48종의 희귀 조류가 순천만을 찾아옵니다.\n\n10월 말이 되면 시베리아에서 날아온 흑두루미가 순천만의 하늘을 검게 물들이는 장관을 연출합니다. 순천시는 새들의 안전한 서식지를 위해 전봇대를 모두 철거하고, 주변 농경지를 친환경 농법으로 경작하여 풍부한 먹이를 제공하는 등 지극한 정성을 쏟고 있습니다. 그 결과 전 세계 흑두루미 개체수의 절반 이상이 이곳에서 겨울을 납니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "공중의 새를 보라 심지도 않고 거두지도 않고 창고에 모아들이지도 아니하되 너희 하늘 아버지께서 기르시나니 너희는 이것들보다 귀하지 아니하냐 (마태복음 6:26)", "quote": "새들의 노래에는 단 하나의 거짓된 음도 없다. 그것들은 모두 완벽한 영적 자유 속에서 울려 퍼진다. 노래하는 모든 순간은 그들 자신의 단순한 존재의 실재로 완전히 채워져 있다. 그들은 그 이상 아무것도 필요로 하지 않는다. (토머스 머튼, 『통회하는 한 방관자의 생각』)"}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "예수님은 공중의 새를 보라고 말씀하십니다. 새들은 내일을 염려하지 않지만, 창조주께서는 그들을 먹이시고 돌보십니다. 불안과 염려로 가득 찬 현대 사회에서, 자유롭게 하늘을 나는 새들의 모습은 우리 안의 불안과 집착을 내려놓고 창조주의 돌보심에 우리 자신을 온전히 맡기는 법을 가르쳐 줍니다. 토머스 머튼은 새들의 노래를 '하나님께 드리는 순수한 찬양'이라고 표현했습니다. 어떤 목적이나 계산 없이, 존재 자체의 순수한 기쁨을 노래하는 새들의 찬양에 귀 기울일 때, 우리의 기도 또한 목적과 계산에서 벗어나 존재의 순수한 기쁨으로 변화될 수 있습니다.\n\n철새의 이동은 영적인 순례 여정에 비유할 수 있습니다. 수천 킬로미터를 날아오는 순천만의 철새들은 바람과 별자리를 길잡이 삼아 자신의 길을 찾아옵니다. 이는 하나님의 인도하심을 따라 살아가는 영적 순례자의 삶과 닮았습니다. 우리 역시 자연의 질서에 자신을 조율할 때, 잃어버렸던 내면의 나침반을 회복하고 참된 길을 발견할 수 있습니다. 새들의 자유로운 날갯짓은 우리를 얽매는 모든 것으로부터의 해방, 곧 영적 자유를 갈망하게 합니다."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "새들의 찬양에 동참하기", "items": ["조용한 곳에서 잠시 멈추어 새들의 노랫소리에 집중해 보세요. 다양한 새들의 소리를 구별해 보려고 노력합니다.", "이 소리가 어떤 목적도 없이, 존재 자체의 기쁨을 표현하는 순수한 찬양임을 묵상합니다.", "나의 기도가 어떠한 목적이나 대가를 바라는 것은 아닌지 성찰해 봅니다.", "새들의 노래에 맞추어, 혹은 침묵 속에서, 나 자신의 존재 자체에 대한 감사를 담아 창조주께 순수한 찬양의 기도를 올려 드립니다."]}, "actio": {"title": "실천 (Actio)", "subtitle": "염려를 내려놓고 날아오르기", "items": ["지금 이 자리에서: 나를 지금 가장 무겁게 짓누르는 염려를 종이에 적고 기도로 하나님께 드립니다.", "이번 주: 30분 이상 아무것도 '생산'하지 않고 자연을 관찰하는 시간을 갖습니다 (새 탐조, 공원 산책).", "생태적 실천: 조류 보호를 위해 유리창에 새 충돌 방지 스티커를 붙이거나, 새 먹이대를 설치합니다."]}, "journaling": ["나를 가장 자유롭게 만드는 것은 무엇입니까? 나를 가장 옭아매는 것은 무엇입니까?", "새들처럼 '지금 이 순간' 존재 자체를 기쁨으로 노래한다면 어떤 노래가 될까요?", "철새가 날아오듯, 어떤 '내면의 나침반'을 따라 살고 있습니까?"]}, {"id": "spot9", "order": 9, "time": "오후 20:00", "place": "순천만 천문대", "chapter_num": 6, "title": "별: 어둠 속의 길잡이", "subtitle": "별 묵상: 침묵과 경외", "theme": "별", "color": "#283593", "course_desc": "순례의 마지막, 천문대에서 광활한 우주를 마주합니다. 쏟아질 듯한 별빛 아래 침묵하며 절대적 경외감 속에서 하루의 여정을 마무리합니다.", "tip": "방문 전 천문대 운영 시간과 기상 예보를 반드시 확인하세요. 빛 공해가 적은 순천만의 밤하늘은 그 자체로 훌륭한 묵상의 대상이 됩니다.", "visio": {"title": "바라보기 (Visio)", "content": "순천만은 낮에는 새를 보고 밤에는 별을 보는, 국내 유일의 천문대를 품고 있습니다. 순천시는 밤 시간 농경지에서 쉬는 철새들이 가로등 불빛에 놀라지 않도록 하고, 온전한 자연경관을 보존하기 위해 인공 불빛을 최소화했습니다. 덕분에 순천만의 밤하늘은 도시에서 보기 힘든 무수한 별들로 가득합니다. 천문대에서는 고성능 천체망원경을 통해 태양의 흑점부터 달의 분화구, 계절별 별자리까지 생생하게 관측할 수 있는 프로그램을 운영합니다. 어둠이 내린 갯벌 위로 쏟아지는 별빛은 고요하고 신비로운 감동을 선사합니다."}, "lectio": {"title": "말씀과 만남 (Lectio)", "bible": "너희는 눈을 높이 들어 누가 이 모든 것을 창조하였나 보라 주께서는 수효대로 만상을 이끌어 내시고 그들의 모든 이름을 부르시나니 그의 권세가 크고 그의 능력이 강하므로 하나도 빠짐이 없느니라 (이사야 40:26)", "quote": "가장 깊은 어둠 속에서 별빛은 더욱 선명하게 빛난다. (십자가의 성 요한)"}, "meditatio": {"title": "묵상하기 (Meditatio)", "content": "성경에서 별은 창조주의 권능과 영광을 드러내는 상징(시편 19:1)이자, 아브라함에게 약속하신 셀 수 없이 많은 자손의 표상(창세기 15:5)이기도 합니다. 동방박사들을 아기 예수께로 인도했던 별처럼, 별은 하나님의 인도하심과 구원의 길잡이 역할을 합니다(마태복음 2:2). 고대 지중해를 항해하던 선원들은 별을 잃어버린 것을 재앙(disaster)이라고 불렀습니다. 반면, 별은 어둠 속에서 빛을 발하는 스타입니다. 그래서 별의 추락은 교만과 심판을 상징하기도 합니다(이사야 14:12).\n\n밤하늘의 별은 빛과 어둠의 공존을 보여줍니다. 가장 깊은 어둠 속에서 별빛은 더욱 선명하게 빛납니다. 이는 우리 삶의 고난과 어둠의 시간이 오히려 진정한 빛이신 하나님을 만나는 통로가 될 수 있음을 시사합니다. 순천만의 밤하늘 아래 서서 우주의 광대함과 나의 미미함을 느끼는 것은, 역설적으로 나라는 존재가 창조주의 계획 안에서 얼마나 소중하고 유일한 존재인지를 깨닫게 하는 겸손의 훈련입니다. 그분은 하늘의 모든 별의 수를 세시고 각각의 이름을 부르시는 분이기 때문입니다(시편 147:4)."}, "contemplatio": {"title": "머물기 (Contemplatio)", "subtitle": "별빛 아래 침묵 기도", "items": ["어둡고 조용한 곳을 찾아 하늘의 별을 바라봅니다. 스마트폰 앱을 이용해 별자리를 찾아보는 것도 좋습니다.", "광대한 우주와 그 안의 나 자신을 번갈아 의식하며, 창조의 신비 앞에 침묵합니다.", "내 삶의 어둠(고난, 슬픔, 절망)을 떠올려 봅니다. 그리고 그 어둠 속에서 희미하게나마 빛나고 있는 희망의 별빛(은혜, 사랑, 위로)을 찾아봅니다.", "동방박사를 인도했던 별처럼, 내 인생의 여정을 이끌어주시는 하나님의 인도하심을 구합니다. \"주님, 저의 길을 비추는 별이 되어 주소서.\""]}, "actio": {"title": "실천 (Actio)", "subtitle": "어둠 속의 빛이 되기", "items": ["지금 이 자리에서: 내 삶의 가장 어두운 시간을 떠올리고, 그 어둠 속에서 나를 이끈 '별' - 사람, 말씀, 사건을 기억하며 감사를 드립니다.", "이번 달: 내 주변에서 어둠 속에 있는 한 사람을 위해 '별빛'이 되어주는 구체적 행동을 합니다. (전화, 편지, 방문 등)", "생태적 실천: 빛 공해를 줄이기 위해 불필요한 조명을 끄는 습관을 갖습니다. 순천만의 '어두운 하늘'을 지키는 것이 철새와 생태계를 보호하는 일임을 기억합니다."]}, "journaling": ["내 삶에서 가장 '어두운' 시간은 언제였습니까? 그 어둠이 나에게 무엇을 가르쳐 주었습니까?", "광대한 우주 앞에서 나는 어떤 감정을 느낍니까? (하찮음? 경외? 위로?)지금 나의 삶을 이끌어가는 '별' (핵심 가치, 소명, 지향점)은 무엇입니까?"]}];
+
+    const STEP_NAMES = [
+      '1. 바라보기 (Visio)',
+      '2. 말씀과 만남 (Lectio)',
+      '3. 묵상하기 (Meditatio)',
+      '4. 머물기 (Contemplatio)',
+      '5. 실천과 저널 (Actio)'
+    ];
+
+    let currentSpotIndex = 0;
+    let currentStepTab = 0;
+    let listMode = 'chapter';
+    let ttsUtterance = null;
+    let isSpeaking = false;
+    let timerInterval = null;
+    let breathInterval = null;
+
+    let fontState = 0;
+    const fontLabels = ['보통', '크게', '아주크게'];
+    const fontClasses = ['', 'font-lg', 'font-xl'];
+
+    function cycleFontSize() {
+      fontState = (fontState + 1) % 3;
+      document.body.className = fontClasses[fontState];
+      document.getElementById('font-scale-label').textContent = fontLabels[fontState];
+      localStorage.setItem('suncheon_font_scale', fontState);
+      showToast('글자 크기: ' + fontLabels[fontState]);
+    }
+
+    const savedFont = localStorage.getItem('suncheon_font_scale');
+    if (savedFont !== null) {
+      fontState = parseInt(savedFont, 10);
+      document.body.className = fontClasses[fontState];
+      document.getElementById('font-scale-label').textContent = fontLabels[fontState];
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2300);
+    }
+
+    function switchMainView(viewId) {
+      stopTTS();
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+      document.getElementById(viewId).classList.add('active');
+
+      document.querySelectorAll('.bottom-tab').forEach(t => t.classList.remove('active'));
+      if (viewId === 'course-view') document.getElementById('tab-course').classList.add('active');
+      else if (viewId === 'guide-view') document.getElementById('tab-guide').classList.add('active');
+      else if (viewId === 'notes-view') {
+        document.getElementById('tab-notes').classList.add('active');
+        renderNotesView();
+      }
+      else if (viewId === 'prayers-view') document.getElementById('tab-prayers').classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function switchListView(mode) {
+      listMode = mode;
+      const chipChapter = document.getElementById('chip-chapter');
+      const chipCourse = document.getElementById('chip-course');
+      if (mode === 'chapter') {
+        if (chipChapter) chipChapter.classList.add('active');
+        if (chipCourse) chipCourse.classList.remove('active');
+      } else {
+        if (chipChapter) chipChapter.classList.remove('active');
+        if (chipCourse) chipCourse.classList.add('active');
+      }
+      renderSpotList();
+    }
+
+    function renderSpotList() {
+      const container = document.getElementById('spot-list-container');
+      let items = [...SPOTS];
+
+      if (listMode === 'chapter') {
+        items.sort((a, b) => a.chapter_num - b.chapter_num);
+      } else {
+        items.sort((a, b) => a.order - b.order);
+      }
+
+      let html = '';
+      items.forEach(spot => {
+        let noteCount = 0;
+        spot.journaling.forEach((_, idx) => {
+          const val = localStorage.getItem(`journal_${spot.id}_${idx}`);
+          if (val && val.trim().length > 0) noteCount++;
+        });
+
+        const originalIndex = SPOTS.findIndex(s => s.id === spot.id);
+
+        if (listMode === 'chapter') {
+          html += `
+            <div class="spot-card" onclick="openSpotDetail(${originalIndex})">
+              <div class="spot-card-top">
+                <span class="spot-badge-time" style="background:#1b3a2b; color:#fff; font-size:0.9rem; padding:4px 10px;">
+                  제${spot.chapter_num}장
+                </span>
+                <span style="font-size:0.88rem; font-weight:700; color:var(--accent-warm);">
+                  주제: ${spot.theme}
+                </span>
+              </div>
+              <h2 class="spot-card-title" style="margin-top:4px;">${spot.title}</h2>
+              <div class="spot-card-place" style="font-size:0.92rem; margin:6px 0;">
+                📍 현장 스폿: ${spot.place} (${spot.time} 코스)
+              </div>
+              <div class="spot-card-subtitle" style="font-size:0.94rem; color:var(--text-muted);">
+                ${spot.subtitle}
+              </div>
+              <div class="spot-progress-indicator ${noteCount > 0 ? 'done' : ''}">
+                ${noteCount > 0 ? '✓ 묵상 기록 ' + noteCount + '개 작성됨' : '• 5단계 영성훈련 읽기 및 진행 →'}
+              </div>
+            </div>
+          `;
+        } else {
+          html += `
+            <div class="spot-card" onclick="openSpotDetail(${originalIndex})">
+              <div class="spot-card-top">
+                <span class="spot-badge-time">⏰ ${spot.time}</span>
+                <span class="spot-chapter-tag">제${spot.chapter_num}장 · ${spot.theme}</span>
+              </div>
+              <h2 class="spot-card-title">${spot.title}</h2>
+              <div class="spot-card-place">📍 ${spot.place}</div>
+              <div class="spot-card-subtitle">${spot.subtitle}</div>
+              <div style="font-size:0.86rem; color:var(--text-muted); margin-top:4px; line-height:1.5;">
+                ${spot.course_desc}
+              </div>
+              <div class="spot-progress-indicator ${noteCount > 0 ? 'done' : ''}">
+                ${noteCount > 0 ? '✓ 묵상 기록 ' + noteCount + '개 작성됨' : '• 5단계 영성훈련 시작하기 →'}
+              </div>
+            </div>
+          `;
+        }
+      });
+      container.innerHTML = html;
+    }
+
+    function openSpotDetail(index) {
+      currentSpotIndex = index;
+      currentStepTab = 0;
+      stopTTS();
+      clearInterval(timerInterval);
+
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+      document.getElementById('detail-view').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      renderDetailHeader();
+      setStepTab(0, false);
+      updateSpotBottomNav();
+    }
+
+    function goBackToList() {
+      stopTTS();
+      clearInterval(timerInterval);
+      switchMainView('course-view');
+      renderSpotList();
+    }
+
+    function renderDetailHeader() {
+      const spot = SPOTS[currentSpotIndex];
+      const headerCard = document.getElementById('detail-header-card');
+      if (listMode === 'chapter') {
+        headerCard.innerHTML = `
+          <div class="detail-meta-bar">
+            <span class="spot-badge-time" style="background:#1b3a2b; color:#fff; font-size:0.92rem; padding:4px 10px;">제${spot.chapter_num}장</span>
+            <span class="spot-chapter-tag" style="font-weight:700; color:var(--accent-warm);">주제: ${spot.theme}</span>
+            <span style="font-size:0.88rem; font-weight:700; color:var(--primary);">📍 ${spot.place} (${spot.time})</span>
+          </div>
+          <h1 class="detail-title">${spot.title}</h1>
+          <div class="detail-sub">${spot.subtitle}</div>
+          <div class="detail-tip-box">
+            🧭 <strong>순천만 현장 스폿</strong>: ${spot.place} (${spot.course_desc})<br>
+            💡 <strong>현장 팁</strong>: ${spot.tip}
+          </div>
+        `;
+      } else {
+        headerCard.innerHTML = `
+          <div class="detail-meta-bar">
+            <span class="spot-badge-time">스폿 ${spot.order} / 9 · ${spot.time}</span>
+            <span class="spot-chapter-tag">제${spot.chapter_num}장 ${spot.theme}</span>
+            <span style="font-size:0.88rem; font-weight:700; color:var(--accent-warm);">📍 ${spot.place}</span>
+          </div>
+          <h1 class="detail-title">${spot.title}</h1>
+          <div class="detail-sub">${spot.subtitle}</div>
+          <div class="detail-tip-box">
+            🧭 <strong>순례 동선 팁</strong>: ${spot.tip}
+          </div>
+        `;
+      }
+    }
+
+    function setStepTab(tabIdx, shouldScroll = true) {
+      currentStepTab = tabIdx;
+      stopTTS();
+      clearInterval(timerInterval);
+
+      for (let i = 0; i < 5; i++) {
+        const node = document.getElementById(`step-node-${i}`);
+        if (node) {
+          if (i === tabIdx) node.classList.add('active');
+          else node.classList.remove('active');
+        }
+      }
+
+      renderStepContent();
+
+      if (shouldScroll) {
+        const target = document.getElementById('step-nav-bar');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    function getStepActionBarHtml(tabIdx) {
+      let html = '<div class="step-action-bar">';
+      if (tabIdx > 0) {
+        html += `<button class="btn-step-prev" onclick="setStepTab(${tabIdx - 1})">
+          ← 이전 (${STEP_NAMES[tabIdx - 1].split(' ')[1]})
+        </button>`;
+      }
+      if (tabIdx < 4) {
+        const isHighlight = tabIdx === 3 ? 'btn-step-highlight' : '';
+        html += `<button class="btn-step-next ${isHighlight}" onclick="setStepTab(${tabIdx + 1})">
+          ${tabIdx === 3 ? '🌱 ' : ''}다음: ${STEP_NAMES[tabIdx + 1]} →
+        </button>`;
+      } else {
+        html += `<button class="btn-step-next btn-step-highlight" onclick="onSpotComplete()">
+          ✓ 스폿 완료 후 다음 장소로 이동 →
+        </button>`;
+      }
+      html += '</div>';
+      return html;
+    }
+
+    function onSpotComplete() {
+      showToast('🎉 스폿 영성훈련을 완료하셨습니다!');
+      if (currentSpotIndex < SPOTS.length - 1) {
+        openSpotDetail(currentSpotIndex + 1);
+      } else {
+        switchMainView('notes-view');
+      }
+    }
+
+    function renderStepContent() {
+      const spot = SPOTS[currentSpotIndex];
+      const contentCard = document.getElementById('step-content-card');
+      let html = '';
+
+      if (currentStepTab === 0) {
+        html = `
+          <div class="step-card-header">
+            <h3 class="step-card-title">👀 ${spot.visio.title}</h3>
+            <button class="step-tts-btn" onclick="toggleTTS('visio')">
+              <span id="tts-icon">🔊</span> <span id="tts-text">읽어주기</span>
+            </button>
+          </div>
+          <p class="prose-text" id="read-target">${spot.visio.content}</p>
+        `;
+      } else if (currentStepTab === 1) {
+        html = `
+          <div class="step-card-header">
+            <h3 class="step-card-title">📖 ${spot.lectio.title}</h3>
+            <button class="step-tts-btn" onclick="toggleTTS('lectio')">
+              <span id="tts-icon">🔊</span> <span id="tts-text">읽어주기</span>
+            </button>
+          </div>
+
+          <div id="read-target">
+            <!-- Super Crisp High Contrast Bible Card -->
+            <div class="bible-card">
+              <div class="bible-badge">📖 성경 말씀</div>
+              <div class="bible-text">${spot.lectio.bible}</div>
+            </div>
+
+            <!-- Deep High Contrast Quote Card -->
+            <div class="quote-card">
+              <div class="quote-badge">🕊️ 영성의 소리</div>
+              <div class="quote-text">${spot.lectio.quote}</div>
+            </div>
+          </div>
+
+          <p class="prose-text" style="font-size: 0.98rem; font-weight:600; color: #374151; margin-top:14px; background:#f3f4f6; padding:12px 14px; border-radius:8px;">
+            💡 천천히 성경 말씀을 두세 번 소리 내어 읽거나 눈으로 음미해 보세요. 오늘 내 마음에 특별히 와닿는 단어나 문장에 머물러 봅니다.
+          </p>
+        `;
+      } else if (currentStepTab === 2) {
+        html = `
+          <div class="step-card-header">
+            <h3 class="step-card-title">🌾 ${spot.meditatio.title}</h3>
+            <button class="step-tts-btn" onclick="toggleTTS('meditatio')">
+              <span id="tts-icon">🔊</span> <span id="tts-text">읽어주기</span>
+            </button>
+          </div>
+          <p class="prose-text" id="read-target">${spot.meditatio.content}</p>
+        `;
+      } else if (currentStepTab === 3) {
+        let checkItemsHtml = '';
+        spot.contemplatio.items.forEach((item, idx) => {
+          const key = `check_${spot.id}_contemplatio_${idx}`;
+          const isDone = localStorage.getItem(key) === 'true';
+          checkItemsHtml += `
+            <label class="check-item ${isDone ? 'done' : ''}" id="label_${key}">
+              <input type="checkbox" ${isDone ? 'checked' : ''} onchange="toggleCheck('${key}')">
+              <span>${item}</span>
+            </label>
+          `;
+        });
+
+        html = `
+          <div class="step-card-header">
+            <h3 class="step-card-title">🕊️ ${spot.contemplatio.title}</h3>
+            <button class="step-tts-btn" onclick="toggleTTS('contemplatio')">
+              <span id="tts-icon">🔊</span> <span id="tts-text">읽어주기</span>
+            </button>
+          </div>
+          <div style="font-weight: 800; color: var(--primary); font-size: 1.05rem; margin-bottom: 8px;">
+            ${spot.contemplatio.subtitle}
+          </div>
+
+          <div class="meditation-box">
+            <div style="font-size: 0.95rem; font-weight: 700; color: #2e5a44;">
+              바람과 침묵의 호흡 기도 (4초 들숨 · 4초 멈춤 · 4초 날숨)
+            </div>
+            <div class="breath-circle" id="breath-node">호흡</div>
+            <div id="timer-display" style="font-size: 1.35rem; font-weight: 800; color: #2e5a44; margin: 8px 0;">00:00</div>
+            <div class="timer-buttons">
+              <button class="timer-btn" onclick="startTimer(60)">1분 침묵</button>
+              <button class="timer-btn" onclick="startTimer(180)">3분 묵상</button>
+              <button class="timer-btn" onclick="startTimer(300)">5분 깊은기도</button>
+              <button class="timer-btn" style="border-color:#999; color:#666;" onclick="stopTimer()">정지</button>
+            </div>
+          </div>
+
+          <div class="checklist" id="read-target">
+            ${checkItemsHtml}
+          </div>
+        `;
+      } else if (currentStepTab === 4) {
+        let actioChecksHtml = '';
+        spot.actio.items.forEach((item, idx) => {
+          const key = `check_${spot.id}_actio_${idx}`;
+          const isDone = localStorage.getItem(key) === 'true';
+          actioChecksHtml += `
+            <label class="check-item ${isDone ? 'done' : ''}" id="label_${key}">
+              <input type="checkbox" ${isDone ? 'checked' : ''} onchange="toggleCheck('${key}')">
+              <span>${item}</span>
+            </label>
+          `;
+        });
+
+        let journalInputsHtml = '';
+        spot.journaling.forEach((q, qIdx) => {
+          const key = `journal_${spot.id}_${qIdx}`;
+          const savedVal = localStorage.getItem(key) || '';
+          journalInputsHtml += `
+            <div class="journal-item">
+              <div class="journal-q">
+                <span>질문 ${qIdx + 1}.</span>
+                <span>${q}</span>
+              </div>
+              <textarea class="journal-textarea" placeholder="여기에 생각을 적어보세요 (자동 저장됩니다)" oninput="saveJournal('${key}', this.value)">${savedVal}</textarea>
+              <div class="saved-status" id="status_${key}">
+                ${savedVal ? '✓ 저장됨' : ''}
+              </div>
+            </div>
+          `;
+        });
+
+        html = `
+          <div class="step-card-header">
+            <h3 class="step-card-title">🌱 ${spot.actio.title} & 나의 기록</h3>
+            <button class="step-tts-btn" onclick="toggleTTS('actio')">
+              <span id="tts-icon">🔊</span> <span id="tts-text">읽어주기</span>
+            </button>
+          </div>
+          <div style="font-weight: 800; color: var(--accent-warm); font-size: 1.05rem; margin-bottom: 10px;">
+            ${spot.actio.subtitle}
+          </div>
+          <div class="checklist" style="margin-bottom: 24px;" id="read-target">
+            ${actioChecksHtml}
+          </div>
+
+          <hr style="border:none; border-top:1.5px dashed var(--border-color); margin: 24px 0 20px 0;">
+
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: #4e342e; margin-bottom: 8px;">
+            📝 저널링 질문 (현장 묵상 노트)
+          </h3>
+          <p style="font-size: 0.94rem; color: var(--text-muted); margin-bottom: 16px;">
+            책에 수록된 3가지 성찰 질문입니다. 현장에서 느끼신 감동을 자유롭게 적어보세요.
+          </p>
+          <div class="journal-box">
+            ${journalInputsHtml}
+          </div>
+        `;
+      }
+
+      contentCard.innerHTML = html + getStepActionBarHtml(currentStepTab);
+
+      if (currentStepTab === 3) {
+        initBreathingAnimation();
+      }
+    }
+
+    function toggleCheck(key) {
+      const label = document.getElementById(`label_${key}`);
+      const checkbox = label.querySelector('input');
+      localStorage.setItem(key, checkbox.checked);
+      if (checkbox.checked) {
+        label.classList.add('done');
+      } else {
+        label.classList.remove('done');
+      }
+    }
+
+    function saveJournal(key, value) {
+      localStorage.setItem(key, value);
+      const statusEl = document.getElementById(`status_${key}`);
+      if (statusEl) {
+        statusEl.textContent = '✓ 저장됨 (' + new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) + ')';
+      }
+    }
+
+    function toggleTTS(stepType) {
+      if (isSpeaking) {
+        stopTTS();
+        return;
+      }
+
+      const targetEl = document.getElementById('read-target');
+      if (!targetEl) return;
+      const textToRead = targetEl.innerText || targetEl.textContent;
+
+      if (!('speechSynthesis' in window)) {
+        alert('이 브라우저에서는 음성 낭독 기능을 지원하지 않습니다.');
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      ttsUtterance = new SpeechSynthesisUtterance(textToRead);
+      ttsUtterance.lang = 'ko-KR';
+      ttsUtterance.rate = 0.9;
+
+      ttsUtterance.onstart = () => {
+        isSpeaking = true;
+        updateTTSButton(true);
+      };
+      ttsUtterance.onend = () => {
+        isSpeaking = false;
+        updateTTSButton(false);
+      };
+      ttsUtterance.onerror = () => {
+        isSpeaking = false;
+        updateTTSButton(false);
+      };
+
+      window.speechSynthesis.speak(ttsUtterance);
+    }
+
+    function stopTTS() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      isSpeaking = false;
+      updateTTSButton(false);
+    }
+
+    function updateTTSButton(speaking) {
+      const btn = document.querySelector('.step-tts-btn');
+      if (!btn) return;
+      if (speaking) {
+        btn.classList.add('speaking');
+        btn.innerHTML = '<span>⏹️</span> <span>낭독 멈춤</span>';
+      } else {
+        btn.classList.remove('speaking');
+        btn.innerHTML = '<span>🔊</span> <span>읽어주기</span>';
+      }
+    }
+
+    function initBreathingAnimation() {
+      clearInterval(breathInterval);
+      const circle = document.getElementById('breath-node');
+      if (!circle) return;
+
+      let state = 0;
+      circle.textContent = '들숨';
+      circle.classList.add('inhale');
+
+      breathInterval = setInterval(() => {
+        state = (state + 1) % 4;
+        circle.textContent = state === 0 ? '들숨' : (state === 2 ? '날숨' : '평온');
+        if (state === 0) {
+          circle.className = 'breath-circle inhale';
+        } else if (state === 2) {
+          circle.className = 'breath-circle exhale';
+        } else if (state === 3) {
+          circle.className = 'breath-circle';
+        }
+      }, 4000);
+    }
+
+    function startTimer(seconds) {
+      clearInterval(timerInterval);
+      let remaining = seconds;
+      const display = document.getElementById('timer-display');
+
+      function update() {
+        const mins = Math.floor(remaining / 60);
+        const secs = remaining % 60;
+        display.textContent = `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        if (remaining <= 0) {
+          clearInterval(timerInterval);
+          showToast('🔔 묵상 시간이 완료되었습니다. 평안한 걸음을 이어가세요.');
+          display.textContent = '00:00 (묵상 완료)';
+        }
+        remaining--;
+      }
+
+      update();
+      timerInterval = setInterval(update, 1000);
+      showToast(`${Math.floor(seconds/60)}분 침묵 묵상을 시작합니다.`);
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      const display = document.getElementById('timer-display');
+      if (display) display.textContent = '00:00';
+    }
+
+    function updateSpotBottomNav() {
+      const prevBtn = document.getElementById('btn-prev-spot');
+      const nextBtn = document.getElementById('btn-next-spot');
+      const prevTitle = document.getElementById('prev-spot-title');
+      const nextTitle = document.getElementById('next-spot-title');
+
+      // Sort items according to active listMode
+      let items = [...SPOTS];
+      if (listMode === 'chapter') {
+        items.sort((a, b) => a.chapter_num - b.chapter_num);
+      } else {
+        items.sort((a, b) => a.order - b.order);
+      }
+
+      const activeSpot = SPOTS[currentSpotIndex];
+      const pos = items.findIndex(s => s.id === activeSpot.id);
+
+      if (pos > 0) {
+        prevBtn.style.visibility = 'visible';
+        const prevSpot = items[pos - 1];
+        if (listMode === 'chapter') {
+          prevBtn.querySelector('.label').textContent = '이전 챕터';
+          prevTitle.textContent = `제${prevSpot.chapter_num}장 ${prevSpot.theme}`;
+        } else {
+          prevBtn.querySelector('.label').textContent = '이전 스폿';
+          prevTitle.textContent = prevSpot.place;
+        }
+      } else {
+        prevBtn.style.visibility = 'hidden';
+      }
+
+      if (pos < items.length - 1) {
+        nextBtn.style.visibility = 'visible';
+        const nextSpot = items[pos + 1];
+        if (listMode === 'chapter') {
+          nextBtn.querySelector('.label').textContent = '다음 챕터';
+          nextTitle.textContent = `제${nextSpot.chapter_num}장 ${nextSpot.theme}`;
+        } else {
+          nextBtn.querySelector('.label').textContent = '다음 스폿';
+          nextTitle.textContent = nextSpot.place;
+        }
+      } else {
+        nextBtn.style.visibility = 'hidden';
+      }
+    }
+
+    function navigateSpot(offset) {
+      let items = [...SPOTS];
+      if (listMode === 'chapter') {
+        items.sort((a, b) => a.chapter_num - b.chapter_num);
+      } else {
+        items.sort((a, b) => a.order - b.order);
+      }
+      const activeSpot = SPOTS[currentSpotIndex];
+      const pos = items.findIndex(s => s.id === activeSpot.id);
+      const newPos = pos + offset;
+      if (newPos >= 0 && newPos < items.length) {
+        const targetOriginalIndex = SPOTS.findIndex(s => s.id === items[newPos].id);
+        openSpotDetail(targetOriginalIndex);
+      }
+    }
+
+    function navigateSpot(offset) {
+      const newIdx = currentSpotIndex + offset;
+      if (newIdx >= 0 && newIdx < SPOTS.length) {
+        openSpotDetail(newIdx);
+      }
+    }
+
+    function renderGuideTimeline() {
+      const container = document.getElementById('guide-timeline');
+      let html = '';
+      SPOTS.forEach((spot) => {
+        html += `
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div style="font-weight:800; color:var(--primary); font-size:0.92rem;">${spot.time} · ${spot.place}</div>
+            <div style="font-weight:700; font-size:1.08rem; margin:2px 0;">${spot.title}</div>
+            <div style="font-size:0.9rem; color:var(--text-muted); margin-bottom:3px;">${spot.subtitle}</div>
+            <div style="font-size:0.86rem; color:var(--text-caption); line-height:1.5;">${spot.course_desc}</div>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    function renderNotesView() {
+      const container = document.getElementById('notes-list-container');
+      let html = '';
+      let totalNotes = 0;
+
+      SPOTS.forEach(spot => {
+        let spotNotes = [];
+        spot.journaling.forEach((q, qIdx) => {
+          const val = localStorage.getItem(`journal_${spot.id}_${qIdx}`);
+          if (val && val.trim().length > 0) {
+            spotNotes.push({ q, a: val.trim() });
+            totalNotes++;
+          }
+        });
+
+        if (spotNotes.length > 0) {
+          html += `
+            <div style="background:var(--surface-variant); border-radius:var(--radius-md); padding:16px; margin-bottom:16px;">
+              <h4 style="color:var(--primary-dark); font-size:1.1rem; margin-bottom:10px;">
+                📍 ${spot.place} (${spot.time}) - ${spot.title}
+              </h4>
+          `;
+          spotNotes.forEach(item => {
+            html += `
+              <div style="margin-bottom:10px; background:#fff; padding:12px; border-radius:6px; border:1px solid #e0dbd0;">
+                <div style="font-weight:700; color:#5d4037; font-size:0.95rem; margin-bottom:4px;">Q. ${item.q}</div>
+                <div style="color:#212529; font-size:1.02rem; line-height:1.65;">${item.a}</div>
+              </div>
+            `;
+          });
+          html += `</div>`;
+        }
+      });
+
+      if (totalNotes === 0) {
+        container.innerHTML = `
+          <div style="text-align:center; padding:40px 10px; color:var(--text-muted);">
+            <div style="font-size:3rem; margin-bottom:10px;">✍️</div>
+            <p style="font-size:1.05rem; font-weight:700;">아직 작성된 묵상 기록이 없습니다.</p>
+            <p style="font-size:0.9rem; margin-top:6px;">각 스폿의 '5. 실천과 저널' 탭에서 질문에 답을 적어보세요.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = html;
+      }
+    }
+
+    function shareMyNotes() {
+      let fullText = `[순천만 갈대밭 영성훈련 묵상 기록]\n순천생태학교\n도서 『순천만 갈대밭 영성훈련: 생태 치유의 길을 걷다』(최광선 저, 순천에코포럼) 기반\n\n`;
+      let count = 0;
+
+      SPOTS.forEach(spot => {
+        let hasNote = false;
+        let subText = `■ ${spot.place} (${spot.time}) - ${spot.title}\n`;
+        spot.journaling.forEach((q, qIdx) => {
+          const val = localStorage.getItem(`journal_${spot.id}_${qIdx}`);
+          if (val && val.trim().length > 0) {
+            hasNote = true;
+            count++;
+            subText += `Q. ${q}\n답변: ${val.trim()}\n\n`;
+          }
+        });
+        if (hasNote) fullText += subText + '-------------------------\n';
+      });
+
+      if (count === 0) {
+        alert('아직 작성된 묵상 노트가 없습니다. 각 스폿에서 질문에 답을 먼저 입력해 주세요.');
+        return;
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullText).then(() => {
+          showToast('전체 묵상 노트가 복사되었습니다! 카톡 등에 붙여넣기 하세요.');
+        }).catch(() => {
+          prompt('아래 텍스트를 복사하세요:', fullText);
+        });
+      } else {
+        prompt('아래 텍스트를 복사하세요:', fullText);
+      }
+    }
+
+    renderSpotList();
+    renderGuideTimeline();
+  </script>
 </body>
 </html>
